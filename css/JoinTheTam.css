@@ -181,6 +181,7 @@ span {
     right: 0;
     z-index: 10;
     background-color: rgba(36, 36, 36, 0.5);
+    overflow: scroll;
 }
 
 .Oppening_popup_form {
@@ -1041,9 +1042,3 @@ footer {
     }
 }
 
-@media (max-height:600px) {
-    .Oppening_popup {
-        overflow: scroll;
-    }
-
-}
