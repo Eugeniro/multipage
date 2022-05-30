@@ -101,7 +101,7 @@ const HeaderDescNavigation = `<div class="Header__IMG">
 </div>`
 
 function HeaderNavigation() {
-    if (window.innerWidth<= 850) 
+    if (document.documentElement.clientWidth<= 850) 
     {
         HeaderContainer.innerHTML = HeaderMobNavigation;
         const Burger = document.querySelector(".Header_Mob_svg")
@@ -121,7 +121,7 @@ function HeaderNavigation() {
     }
 
 
-    if (window.innerWidth>850) 
+    if (document.documentElement.clientWidth>850) 
     {
         HeaderContainer.innerHTML = HeaderDescNavigation
         const HeadMenuli = document.querySelectorAll(".Header_Navigation_item")
@@ -148,10 +148,10 @@ function SetSizeSpace()
 {
     let Postion=0;
     SizeSpace=480;
-    if (window.innerWidth<=1440 && window.innerWidth>1280)SizeSpace=420;
-    if (window.innerWidth<=1280 && window.innerWidth>1152)SizeSpace=550;
-    if (window.innerWidth<=1152 && window.innerWidth>800)SizeSpace=425;
-    if (window.innerWidth<=800 && window.innerWidth>780)SizeSpace=430;
+    if (document.documentElement.clientWidth<=1440 && document.documentElement.clientWidth>1280)SizeSpace=420;
+    if (document.documentElement.clientWidth<=1280 && document.documentElement.clientWidth>1152)SizeSpace=550;
+    if (document.documentElement.clientWidth<=1152 && document.documentElement.clientWidth>800)SizeSpace=425;
+    if (document.documentElement.clientWidth<=800 && document.documentElement.clientWidth>780)SizeSpace=430;
     for (let i = 0; i < SlideGame.length; i++) {
     
         SlideGame[i].style.left=`${Postion}px`
