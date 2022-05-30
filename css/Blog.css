@@ -825,6 +825,7 @@ footer {
         top: -28px;
         max-width: 270px;
         padding: 15px 15px 40px 35px;
+        z-index: 1;
     }
 
     .Header_Mob_Navigation_arrow {
