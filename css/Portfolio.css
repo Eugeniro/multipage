@@ -1022,7 +1022,7 @@ footer {
     }
 
     .LookingPartner_about h2 {
-        font-size: 42px;
+        font-size: 40px;
     }
 }
 
@@ -1050,7 +1050,7 @@ footer {
 
 }
 
-@media (max-width:360px) {
+@media (max-width:370px) {
 
     .LookingPartner {
         padding: 150px 10px 0px 10px;
