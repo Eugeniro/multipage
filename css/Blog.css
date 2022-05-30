@@ -404,6 +404,7 @@ header {
 .Blog_item_right_Top {
     display: flex;
     margin-bottom: 20px;
+    color:#242424;
 }
 
 .Blog_Rating_star {
