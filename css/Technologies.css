@@ -1165,7 +1165,10 @@ footer {
     .Contacts_body_right form {
         margin: 0 auto;
     }
-
+    .RecProject_Container
+    {
+        background-size:cover;
+    }
     .RecProject_Content {
         display: flex;
         flex-direction: column;
