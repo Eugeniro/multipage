@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Products.css">
     <title>Products</title>
 </head>
+
 <body>
     <!--header -->
     <header>
         <div class="Header__Container">
             <div class="Header__IMG">
-               <a href="index.html"> <img src="Images/logoBlue.png" alt="logo"></a>
+                <a href="index.html">
+                    <picture>
+                        <source type="image/avif"
+                            srcset="Images/logoBlue.avif 1x,Images/logoBlue@2x.avif 2x, Images/logoBlue@3x.avif 3x">
+                        <source type="image/webp"
+                            srcset="Images/logoBlue.webp 1x,Images/logoBlue@2x.webp 2x, Images/logoBlue@3x.webp 3x">
+                        <img src="Images/logoBlue.png" srcset="Images/logoBlue@2x.png 2x, Images/logoBlue@3x.png 3x"
+                            alt="logo">
+                    </picture>
+                </a>
             </div>
-           <div class="Header_Navigation">
+            <div class="Header_Navigation">
                 <ul>
-                    <li class="Header_Navigation_item"><a href="ServicesVr.html">SERVICES</a> <svg class="Header_Navigation_arrow">
-                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                    </svg>
+                    <li class="Header_Navigation_item"><a href="ServicesVr.html">SERVICES</a> <svg
+                            class="Header_Navigation_arrow">
+                            <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                        </svg>
                         <div class="Header_Navigation_Sub_Menu">
                             <ul>
                                 <li><a href="ServicesVr.html">MOBILE APPLICATION DEVELOPMENT </a></li>
@@ -30,9 +42,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="Header_Navigation_item"><a href="Technologies.html">TECHNOLOGIES</a> <svg class="Header_Navigation_arrow">
-                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                    </svg>
+                    <li class="Header_Navigation_item"><a href="Technologies.html">TECHNOLOGIES</a> <svg
+                            class="Header_Navigation_arrow">
+                            <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                        </svg>
                         <div class="Header_Navigation_Sub_Menu">
                             <ul>
                                 <li><a href="Technologies.html">ANDROID </a></li>
@@ -44,9 +57,10 @@
                     <li class="Header_Navigation_item Active_Page"><a href="Products.html">PRODUCTS</a></li>
                     <li class="Header_Navigation_item"><a href="Portfolio.html">PORTFOLIO</a></li>
                     <li class="Header_Navigation_item"><a href="Blog.html">BLOG</a></li>
-                    <li class="Header_Navigation_item"><a href="AboutUs.html">ABOUT US</a> <svg class="Header_Navigation_arrow">
-                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                    </svg>
+                    <li class="Header_Navigation_item"><a href="AboutUs.html">ABOUT US</a> <svg
+                            class="Header_Navigation_arrow">
+                            <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                        </svg>
                         <div class="Header_Navigation_Sub_Menu">
                             <ul>
                                 <li><a href="ContacUs.html">CONTACTS </a></li>
@@ -57,134 +71,203 @@
                     </li>
                 </ul>
             </div>
-            <div >
-             <a href="ContacUs.html"> <button class="TopButton">CONTACT US</button></a>
+            <div>
+                <a href="ContacUs.html"> <button class="TopButton Header_button">CONTACT US</button></a>
             </div>
         </div>
     </header>
-        <main>
-     <!--Social_Bar_Right -->
-     <div class="Social_Bar_Right">
-        <ul>
-            <li><a href="https://facebook.com/" target="_blank"><img src="Images/Icons/fb.svg" alt=""></a></li>
-            <li><a href="https://www.linkedin.com/" target="_blank"><img src="Images/Icons/in.svg" alt=""></a></li>
-            <li><a href="https://www.whatsapp.com/" target="_blank"><img src="Images/Icons/Phone.svg" alt=""></a></li>
-            <li><a href="https://www.skype.com/ru/" target="_blank"><img src="Images/Icons/skype.svg" alt=""></a></li>
-        </ul>
-    </div>
-            <!--Current_Page -->
-            <div class="Current_Page">
-                <a href="index.html">Home</a>
-                <svg>
-                    <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                </svg>
-                <a href="Products.html"> Products </a>
+    <main>
+        <!--Social_Bar_Right -->
+        <section class="Social_Bar_Right">
+            <ul>
+                <a href="https://facebook.com/" target="_blank">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.0301C24 5.38947 18.624 0 12 0C5.376 0 0 5.38947 0 12.0301C0 17.8526 4.128 22.7008 9.6 23.8195V15.6391H7.2V12.0301H9.6V9.02256C9.6 6.70075 11.484 4.81203 13.8 4.81203H16.8V8.42105H14.4C13.74 8.42105 13.2 8.96241 13.2 9.62406V12.0301H16.8V15.6391H13.2V24C19.26 23.3985 24 18.2737 24 12.0301Z" fill="#0D6EB7"/>
+                            </svg>
+                    </li>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.3736 0 0 5.3736 0 12C0 18.6264 5.3736 24 12 24C18.6264 24 24 18.6264 24 12C24 5.3736 18.6264 0 12 0ZM8.51294 18.1406H5.59039V9.34808H8.51294V18.1406ZM7.05176 8.14746H7.03271C6.052 8.14746 5.41772 7.47235 5.41772 6.6286C5.41772 5.76581 6.07141 5.10938 7.07117 5.10938C8.07092 5.10938 8.68616 5.76581 8.7052 6.6286C8.7052 7.47235 8.07092 8.14746 7.05176 8.14746ZM19.051 18.1406H16.1288V13.4368C16.1288 12.2547 15.7057 11.4485 14.6483 11.4485C13.8409 11.4485 13.3601 11.9923 13.1488 12.5173C13.0715 12.7051 13.0527 12.9677 13.0527 13.2305V18.1406H10.1303C10.1303 18.1406 10.1686 10.173 10.1303 9.34808H13.0527V10.593C13.441 9.9939 14.1359 9.14172 15.6865 9.14172C17.6093 9.14172 19.051 10.3984 19.051 13.099V18.1406Z" fill="#0D6EB7"/>
+                            </svg>                            
+                    </li>
+                </a>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.003 0H11.997C5.3805 0 0 5.382 0 12C0 14.625 0.846 17.058 2.2845 19.0335L0.789 23.4915L5.4015 22.017C7.299 23.274 9.5625 24 12.003 24C18.6195 24 24 18.6165 24 12C24 5.3835 18.6195 0 12.003 0ZM18.9855 16.9455C18.696 17.763 17.547 18.441 16.6305 18.639C16.0035 18.7725 15.1845 18.879 12.4275 17.736C8.901 16.275 6.63 12.6915 6.453 12.459C6.2835 12.2265 5.028 10.5615 5.028 8.8395C5.028 7.1175 5.9025 6.279 6.255 5.919C6.5445 5.6235 7.023 5.4885 7.482 5.4885C7.6305 5.4885 7.764 5.496 7.884 5.502C8.2365 5.517 8.4135 5.538 8.646 6.0945C8.9355 6.792 9.6405 8.514 9.7245 8.691C9.81 8.868 9.8955 9.108 9.7755 9.3405C9.663 9.5805 9.564 9.687 9.387 9.891C9.21 10.095 9.042 10.251 8.865 10.47C8.703 10.6605 8.52 10.8645 8.724 11.217C8.928 11.562 9.633 12.7125 10.671 13.6365C12.0105 14.829 13.0965 15.21 13.485 15.372C13.7745 15.492 14.1195 15.4635 14.331 15.2385C14.5995 14.949 14.931 14.469 15.2685 13.9965C15.5085 13.6575 15.8115 13.6155 16.1295 13.7355C16.4535 13.848 18.168 14.6955 18.5205 14.871C18.873 15.048 19.1055 15.132 19.191 15.2805C19.275 15.429 19.275 16.1265 18.9855 16.9455Z" fill="#0D6EB7"/>
+                            </svg>                            
+                    </li>
+                </a>
+                <a href="https://www.skype.com/ru/" target="_blank">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.2858 14.533C25.0221 6.73175 18.1869 -0.355273 10.1599 1.0052C5.80223 -1.69876 0 1.3568 0 6.54097C0 7.74661 0.332669 8.87534 0.911094 9.84825C-0.702302 17.6675 6.18885 24.6526 14.2089 23.1992C19.8782 26.1969 26.143 20.2186 23.2858 14.533ZM15.6554 19.2377C13.5495 20.1037 10.084 20.1087 7.98706 19.0109C4.99703 17.4167 4.46556 13.8278 7.04499 13.8278C8.98906 13.8278 8.37367 16.0942 10.3367 17.0182C11.2378 17.4347 13.1749 17.4777 14.3008 16.7185C15.4127 15.9744 15.3108 14.8037 14.7064 14.2443C13.105 12.766 8.52253 13.3533 6.42761 10.7652C5.51751 9.64248 5.34568 7.66171 6.46457 6.22532C8.41463 3.71615 14.1369 3.56332 16.5975 5.45819C18.8692 7.21621 18.2558 9.54958 16.4227 9.54958C14.2179 9.54958 15.3767 6.66483 11.8173 6.66483C9.23682 6.66483 8.22182 8.49977 10.039 9.39276C12.5026 10.6164 18.7803 10.2078 18.7803 14.9895C18.7753 16.9792 17.5555 18.4626 15.6554 19.2377Z" fill="#0D6EB7"/>
+                            </svg>
+                            
+                    </li>
+                </a>
+            </ul>
+        </section>
+        <!--Current_Page -->
+        <section class="Current_Page">
+            <a href="index.html">Home</a>
+            <svg>
+                <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+            </svg>
+            <a href="Products.html"> Products </a>
+        </section>
+        <!--TOP -->
+        <section class="Top_container">
+            <div class="Top_left">
+                <h1>Stan assets products</h1>
             </div>
-          <!--TOP -->
-          <div class="Top_container">
-                <div class="Top_left">
-                    <h1>Stan assets products</h1>
+            <div class="Top_Right">
+                <picture>
+                    <source type="image/avif"
+                        srcset="Images/Products/Devices.avif 1x,Images/Products/Devices@2x.avif 2x, Images/Products/Devices@3x.avif 3x">
+                    <source type="image/webp"
+                        srcset="Images/Products/Devices.webp 1x,Images/Products/Devices@2x.webp 2x, Images/Products/Devices@3x.webp 3x">
+                    <img src="Images/Products/Devices.png" srcset="Images/Products/Devices@2x.png 2x, Images/Products/Devices@3x.png 3x"
+                        alt="Devices">
+                </picture>
+            </div>
+        </section>
+        <!--Products -->
+        <section class="Products_container">
+            <div class="Products_body">
+                <div class="RecProject_Content_item">
+                    <picture>
+                        <source type="image/avif" srcset="Images/Products/MobPro.avif 1x,Images/Products/MobPro@2x.avif 2x,Images/Products/MobPro@3x.avif 3x">
+                        <source type="image/webp" srcset="Images/Products/MobPro.webp 1x,Images/Products/MobPro@2x.webp 2x,Images/Products/MobPro@3x.webp 3x">
+                        <img src="Images/Products/MobPro.jpg" srcset="Images/Products/MobPro@2x.jpg 2x,Images/Products/MobPro@3x.jpg 3x" alt="MobPro">
+                    </picture>
+                    <div class="RecProject_Content_item_text">
+                        <h3>Ultimate mobile pro </h3>
+                        <p>This plugin provides easy and flexible functionality of iOS native
+                            functions which are not natively available from Unity.</p>
+                    </div>
                 </div>
-                <div class="Top_Right"><img src="Images/Products/Devices.png" alt=""></div>
-            </div>
-              <!--Products -->
-              <div class="Products_container">
-                  <div class="Products_body">
-                    <div class="RecProject_Content_item">
-                        <img src="Images/Products/MobPro.png" alt="MobPro">
-                        <div class="RecProject_Content_item_text">
-                            <h3>Ultimate mobile pro </h3>
-                            <p>This plugin provides easy and flexible functionality of iOS native 
-                                functions which are not natively available from Unity.</p>
-                        </div>
+                <div class="RecProject_Content_item">
+                    <picture>
+                        <source type="image/avif" srcset="Images/Products/AndroidNative.avif 1x,Images/Products/AndroidNative@2x.avif 2x,Images/Products/AndroidNative@3x.avif 3x">
+                        <source type="image/webp" srcset="Images/Products/AndroidNative.webp 1x,Images/Products/AndroidNative@2x.webp 2x,Images/Products/AndroidNative@3x.webp 3x">
+                        <img src="Images/Products/AndroidNative.jpg" srcset="Images/Products/AndroidNative@2x.jpg 2x,Images/Products/AndroidNative@3x.jpg 3x" alt="Android">
+                    </picture>
+                    <div class="RecProject_Content_item_text">
+                        <h3>android native pro </h3>
+                        <p>This plugin provides easy and flexible functionality of iOS native
+                            functions which are not natively available from Unity.</p>
                     </div>
-                    <div class="RecProject_Content_item">
-                        <img src="Images/Products/AndroidNative.png" alt="Android">
-                        <div class="RecProject_Content_item_text">
-                            <h3>android native pro </h3>
-                            <p>This plugin provides easy and flexible functionality of iOS native 
-                                functions which are not natively available from Unity.</p>
-                        </div>
-                    </div>
-                    <div class="RecProject_Content_item item_product">
-                        <div class="Product_button" >
-                            <button><svg  class="Procuct_svg">
+                </div>
+                <div class="RecProject_Content_item item_product">
+                    <div class="Product_button">
+                        <button><svg class="Procuct_svg">
                                 <use xlink:href="Images/Products/unity.svg#Unity" />
                             </svg></button>
-                            <button><svg class="Procuct_svg">
+                        <button><svg class="Procuct_svg">
                                 <use xlink:href="Images/footer_Icon/cat.svg#cat" />
                             </svg></button>
-                        </div>
-                        <img src="Images/Products/iosNat.png" alt="ios">
-                        <div class="RecProject_Content_item_text">
-                            <h3>ios native pro</h3>
-                            <p>This plugin provides easy and flexible functionality of iOS native 
-                                functions which are not natively available from Unity.</p>
-                        </div>
                     </div>
-                    <div class="RecProject_Content_item">
-                        <img src="Images/Products/AfterEffects.png" alt="AfterEffects">
-                        <div class="RecProject_Content_item_text">
-                            <h3>after effects importer</h3>
-                            <p>This plugin provides easy and flexible functionality of iOS native
-                                 functions which are not natively available from Unity.</p>
-                        </div>
+                    <picture>
+                        <source type="image/avif" srcset="Images/Products/iosNat.avif 1x,Images/Products/iosNat.avif 2x,Images/Products/iosNat.avif 3x">
+                        <source type="image/webp" srcset="Images/Products/iosNat.webp 1x,Images/Products/iosNat.webp 2x,Images/Products/iosNat.webp 3x">
+                        <img src="Images/Products/iosNat.jpg" srcset="Images/Products/iosNat.jpg 2x,Images/Products/iosNat.jpg 3x" alt="ios">
+                    </picture>
+                    <div class="RecProject_Content_item_text">
+                        <h3>ios native pro</h3>
+                        <p>This plugin provides easy and flexible functionality of iOS native
+                            functions which are not natively available from Unity.</p>
                     </div>
-                    <div class="RecProject_Content_item">
-                        <img src="Images/Products/GoogLoc.png" alt="GoogLoc">
-                        <div class="RecProject_Content_item_text">
-                            <h3>google doc localization </h3>
-                            <p>This plugin provides easy and flexible functionality of iOS 
-                                native functions 
-                                which are not natively available from Unity.</p>
-                        </div>
+                </div>
+                <div class="RecProject_Content_item">
+                    <picture>
+                        <source type="image/avif" srcset="Images/Products/AfterEffects.avif 1x,Images/Products/AfterEffects@2x.avif 2x,Images/Products/AfterEffects@3x.avif 3x">
+                        <source type="image/webp" srcset="Images/Products/AfterEffects.webp 1x,Images/Products/AfterEffects@2x.webp 2x,Images/Products/AfterEffects@3x.webp 3x">
+                        <img src="Images/Products/AfterEffects.jpg" srcset="Images/Products/AfterEffects@2x.jpg 2x,Images/Products/AfterEffects@3x.jpg 3x" alt="AfterEffects">
+                    </picture>
+                    <div class="RecProject_Content_item_text">
+                        <h3>after effects importer</h3>
+                        <p>This plugin provides easy and flexible functionality of iOS native
+                            functions which are not natively available from Unity.</p>
                     </div>
-                    <div class="RecProject_Content_item">
-                        <img src="Images/Products/GoogMan.png" alt="GoogMan">
-                        <div class="RecProject_Content_item_text">
-                            <h3>google tag manager </h3>
-                            <p>This plugin provides easy and flexible functionality of iOS 
-                                native functions which are not natively available from Unity.</p>
-                        </div>
+                </div>
+                <div class="RecProject_Content_item">
+                    <picture>
+                        <source type="image/webp" srcset="Images/Products/GoogLoc.webp 1x,Images/Products/GoogLoc@2x.webp 2x,Images/Products/GoogLocwebp@3x.webp 3x">
+                        <img src="Images/Products/GoogLoc.jpg" srcset="Images/Products/GoogLoc@2x.jpg 2x,Images/Products/GoogLoc@3x.jpg 3x" alt="GoogLoc">
+                    </picture>
+                    <div class="RecProject_Content_item_text">
+                        <h3>google doc localization </h3>
+                        <p>This plugin provides easy and flexible functionality of iOS
+                            native functions
+                            which are not natively available from Unity.</p>
                     </div>
-                    <div class="RecProject_Content_item">
-                        <img src="Images/Products/Texture.png" alt="Texture">
-                        <div class="RecProject_Content_item_text">
-                            <h3>texture packer pro </h3>
-                            <p>This plugin provides easy and flexible functionality of iOS 
-                                native functions which
-                                 are not natively available from Unity.</p>
-                        </div>
+                </div>
+                <div class="RecProject_Content_item">
+                    <picture>
+                        <source type="image/avif" srcset="Images/Products/GoogMan.avif 1x,Images/Products/GoogMan@2x.avif 2x,Images/Products/GoogMan@3x.avif 3x">
+                        <source type="image/webp" srcset="Images/Products/GoogMan.webp 1x,Images/Products/GoogMan@2x.webp 2x,Images/Products/GoogMan@3x.webp 3x">
+                        <img src="Images/Products/GoogMan.jpg" srcset="Images/Products/GoogMan@2x.jpg 2x,Images/Products/GoogMan@3x.jpg 3x" alt="GoogMan">
+                    </picture>
+                    <div class="RecProject_Content_item_text">
+                        <h3>google tag manager </h3>
+                        <p>This plugin provides easy and flexible functionality of iOS
+                            native functions which are not natively available from Unity.</p>
                     </div>
-                    <div class="RecProject_Content_item">
-                        <img src="Images/Products/amazon.png" alt="amazon">
-                        <div class="RecProject_Content_item_text">
-                            <h3>amazon native </h3>
-                            <p>This plugin provides easy and flexible functionality of 
-                                iOS native functions which are not natively available from Unity.</p>
-                        </div>
+                </div>
+                <div class="RecProject_Content_item">
+                    <picture>
+                        <source type="image/avif" srcset="Images/Products/Texture.avif 1x,Images/Products/Texture@2x.avif 2x,Images/Products/Texture@3x.avif 3x">
+                        <source type="image/webp" srcset="Images/Products/Texture.webp 1x,Images/Products/Texture@2x.webp 2x,Images/Products/Texture@3x.webp 3x">
+                        <img src="Images/Products/Texture.jpg" srcset="Images/Products/Texture@2x.jpg 2x,Images/Products/Texture@3x.jpg 3x" alt="Texture">
+                    </picture>
+                    <div class="RecProject_Content_item_text">
+                        <h3>texture packer pro </h3>
+                        <p>This plugin provides easy and flexible functionality of iOS
+                            native functions which
+                            are not natively available from Unity.</p>
                     </div>
-                    <div class="RecProject_Content_item">
-                        <img src="Images/Products/GoogSDK.png" alt="">
-                        <div class="RecProject_Content_item_text">
-                            <h3>google analytics sdk </h3>
-                            <p>This plugin provides easy and flexible functionality of 
-                                iOS native functions which are not natively available from Unity.</p>
-                        </div>
+                </div>
+                <div class="RecProject_Content_item">
+                    <picture>
+                        <source type="image/avif" srcset="Images/Products/amazon.avif 1x,Images/Products/amazon.avif 2x,Images/Products/amazon.avif 3x">
+                        <source type="image/webp" srcset="Images/Products/amazon.webp 1x,Images/Products/amazon.webp 2x,Images/Products/amazon 3x">
+                        <img src="Images/Products/amazon.jpg" srcset="Images/Products/amazon.jpg 2x,Images/Products/amazon.jpg 3x" alt="amazon">
+                    </picture>
+                    <div class="RecProject_Content_item_text">
+                        <h3>amazon native </h3>
+                        <p>This plugin provides easy and flexible functionality of
+                            iOS native functions which are not natively available from Unity.</p>
                     </div>
-                  </div>
-               
-              </div>
-                  <!--LookingPartner -->
-        <div class="LookingPartner">
+                </div>
+                <div class="RecProject_Content_item">
+                    <picture>
+                        <source type="image/avif" srcset="Images/Products/GoogSDK.avif 1x,Images/Products/GoogSDK@2x.avif 2x,Images/Products/GoogSDK@3x.avif 3x">
+                        <source type="image/webp" srcset="Images/Products/GoogSDK.webp 1x,Images/Products/GoogSDK@2x.webp 2x,Images/Products/GoogSDK@3x.webp 3x">
+                        <img src="Images/Products/GoogSDK.jpg" srcset="Images/Products/GoogSDK@2x.jpg 2x,Images/Products/GoogSDK@3x.jpg 3x" alt="GoogSDK">
+                    </picture>
+                    <div class="RecProject_Content_item_text">
+                        <h3>google analytics sdk </h3>
+                        <p>This plugin provides easy and flexible functionality of
+                            iOS native functions which are not natively available from Unity.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--LookingPartner -->
+        <section class="LookingPartner">
             <div class="LookingPartner_about">
                 <h2>LOOKING FOR A PARTNER IN BUILDING A SOLUTION?</h2>
                 <p>We are ready to discuss your project requirements</p>
                 <button>Let’s talk</button>
             </div>
-        </div>
-           <!--CONTACTS -->
-           <div class="Contacts_container">
+        </section>
+        <!--CONTACTS -->
+        <section class="Contacts_container">
             <div class="Contacts_Header">
                 <h2>CONTACTS</h2>
                 <p>
@@ -199,17 +282,42 @@
             <div class="Contacts_body">
                 <div class="Contacts_body_left">
                     <ul>
-                        <li class="Contacts_item"><img src="Images/Icons/locatio.svg" alt=""><span>Ukraine, Kyiv, Rodyny
-                                Kristeriv 20B, office 188</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/phone_2.svg" alt=""><span>+38 (093) 345 56
+                        <a href="">
+                            <li class="Contacts_item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="#276ED8"/>
+                                </svg>
+                                <span>Ukraine, Kyiv, Rodyny
+                                    Kristeriv 20B, office 188</span></li>
+                        </a>
+                       <a href="">
+                        <li class="Contacts_item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="#276ED8"/>
+                            </svg>
+                            <span>+38 (093) 345 56
                                 76</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/Phone.svg" alt=""><span>+38 (093) 345 56
-                                77</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/skype.svg" alt=""><span>Stanassets</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/email.svg"
-                                alt=""><span>stanassets@gmail.com</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/fb.svg"
-                                alt=""><span>facebook.com/ Stanassets</span></li>
+                       </a>
+                        <a href="">
+                            <li class="Contacts_item"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.003 0H11.997C5.3805 0 0 5.382 0 12C0 14.625 0.846 17.058 2.2845 19.0335L0.789 23.4915L5.4015 22.017C7.299 23.274 9.5625 24 12.003 24C18.6195 24 24 18.6165 24 12C24 5.3835 18.6195 0 12.003 0ZM18.9855 16.9455C18.696 17.763 17.547 18.441 16.6305 18.639C16.0035 18.7725 15.1845 18.879 12.4275 17.736C8.901 16.275 6.63 12.6915 6.453 12.459C6.2835 12.2265 5.028 10.5615 5.028 8.8395C5.028 7.1175 5.9025 6.279 6.255 5.919C6.5445 5.6235 7.023 5.4885 7.482 5.4885C7.6305 5.4885 7.764 5.496 7.884 5.502C8.2365 5.517 8.4135 5.538 8.646 6.0945C8.9355 6.792 9.6405 8.514 9.7245 8.691C9.81 8.868 9.8955 9.108 9.7755 9.3405C9.663 9.5805 9.564 9.687 9.387 9.891C9.21 10.095 9.042 10.251 8.865 10.47C8.703 10.6605 8.52 10.8645 8.724 11.217C8.928 11.562 9.633 12.7125 10.671 13.6365C12.0105 14.829 13.0965 15.21 13.485 15.372C13.7745 15.492 14.1195 15.4635 14.331 15.2385C14.5995 14.949 14.931 14.469 15.2685 13.9965C15.5085 13.6575 15.8115 13.6155 16.1295 13.7355C16.4535 13.848 18.168 14.6955 18.5205 14.871C18.873 15.048 19.1055 15.132 19.191 15.2805C19.275 15.429 19.275 16.1265 18.9855 16.9455Z" fill="#0D6EB7"/>
+                                </svg>             <span>+38 (093) 345 56
+                                    77</span></li>
+                        </a>
+                       <a href="">
+                        <li class="Contacts_item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.2858 14.533C25.0221 6.73175 18.1869 -0.355273 10.1599 1.0052C5.80223 -1.69876 0 1.3568 0 6.54097C0 7.74661 0.332669 8.87534 0.911094 9.84825C-0.702302 17.6675 6.18885 24.6526 14.2089 23.1992C19.8782 26.1969 26.143 20.2186 23.2858 14.533ZM15.6554 19.2377C13.5495 20.1037 10.084 20.1087 7.98706 19.0109C4.99703 17.4167 4.46556 13.8278 7.04499 13.8278C8.98906 13.8278 8.37367 16.0942 10.3367 17.0182C11.2378 17.4347 13.1749 17.4777 14.3008 16.7185C15.4127 15.9744 15.3108 14.8037 14.7064 14.2443C13.105 12.766 8.52253 13.3533 6.42761 10.7652C5.51751 9.64248 5.34568 7.66171 6.46457 6.22532C8.41463 3.71615 14.1369 3.56332 16.5975 5.45819C18.8692 7.21621 18.2558 9.54958 16.4227 9.54958C14.2179 9.54958 15.3767 6.66483 11.8173 6.66483C9.23682 6.66483 8.22182 8.49977 10.039 9.39276C12.5026 10.6164 18.7803 10.2078 18.7803 14.9895C18.7753 16.9792 17.5555 18.4626 15.6554 19.2377Z" fill="#0D6EB7"/>
+                            </svg><span>Stanassets</span></li>
+                       </a>
+                       <a href="">
+                        <li class="Contacts_item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#276ED8"/>
+                            </svg>
+                            <span>stanassets@gmail.com</span></li>
+                       </a>
+                       <a href="">
+                         <li class="Contacts_item"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.0301C24 5.38947 18.624 0 12 0C5.376 0 0 5.38947 0 12.0301C0 17.8526 4.128 22.7008 9.6 23.8195V15.6391H7.2V12.0301H9.6V9.02256C9.6 6.70075 11.484 4.81203 13.8 4.81203H16.8V8.42105H14.4C13.74 8.42105 13.2 8.96241 13.2 9.62406V12.0301H16.8V15.6391H13.2V24C19.26 23.3985 24 18.2737 24 12.0301Z" fill="#0D6EB7"/>
+                            </svg><span>facebook.com/ Stanassets</span></li>
+                       </a>
                     </ul>
                 </div>
                 <div class="Contacts_body_right">
@@ -223,14 +331,17 @@
                     </form>
                 </div>
             </div>
-        </div>
-        </div>
-        </main>
+        </section>
+    </main>
     <!--footer -->
     <footer>
         <div class="Footer_top">
             <div class="Footer_Social">
-                <div class="Footer_Social_logo"> <a href="index.html"><img src="Images/Icons/logo.png" alt=""><span>stan’s
+                <div class="Footer_Social_logo"> <a href="index.html"> <picture>
+                    <source type="image/avif" srcset="Images/Icons/logo@2x.avif 2x, Images/Icons/logo@3x.avif 3x">
+                    <source type="image/webp" srcset="Images/Icons/logo.webp 1x,Images/Icons/logo@2x.webp 2x, Images/Icons/logo@3x.webp 3x">
+                    <img src="Images/Icons/logo.png" srcset="Images/Icons/logo@2x.png 2x, Images/Icons/logo@3x.png 3x" alt="logo">
+                </picture><span>stan’s
                             assets</span></a></div>
                 <div class="Footer_Social_link">
                     <div class="Footer_Social_link_item"><a href="https://facebook.com/" target="_blank">
@@ -294,11 +405,12 @@
                 <span>© 2021 - Stan’s Assets. All Right Reserved</span>
             </div>
             <div class="Footer_bottom_policy">
-                <div class="Footer_bottom_policy_item"><span>Privacy policy</span></div>
-                <div class="Footer_bottom_policy_item"><span>Cookies policy</span></div>
+                <div class="Footer_bottom_policy_item"><a href=""><span>Privacy policy</span></a></div>
+                <div class="Footer_bottom_policy_item"><a href=""><span>Cookies policy</span></a></div>
             </div>
         </div>
     </footer>
-<script src="js/Products.js"></script>
+    <script src="js/Products.js"></script>
 </body>
+
 </html>

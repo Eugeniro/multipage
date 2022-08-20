@@ -13,13 +13,23 @@
     <header>
         <div class="Header__Container">
             <div class="Header__IMG">
-               <a href="index.html"> <img src="Images/logoBlue.png" alt="logo"></a>
+                <a href="index.html">
+                    <picture>
+                        <source type="image/avif"
+                            srcset="Images/logoBlue.avif 1x,Images/logoBlue@2x.avif 2x, Images/logoBlue@3x.avif 3x">
+                        <source type="image/webp"
+                            srcset="Images/logoBlue.webp 1x,Images/logoBlue@2x.webp 2x, Images/logoBlue@3x.webp 3x">
+                        <img src="Images/logoBlue.png" srcset="Images/logoBlue@2x.png 2x, Images/logoBlue@3x.png 3x"
+                            alt="logo">
+                    </picture>
+                </a>
             </div>
-           <div class="Header_Navigation">
+            <div class="Header_Navigation">
                 <ul>
-                    <li class="Header_Navigation_item"><a href="ServicesVr.html">SERVICES</a> <svg class="Header_Navigation_arrow">
-                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                    </svg>
+                    <li class="Header_Navigation_item"><a href="ServicesVr.html">SERVICES</a> <svg
+                            class="Header_Navigation_arrow">
+                            <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                        </svg>
                         <div class="Header_Navigation_Sub_Menu">
                             <ul>
                                 <li><a href="ServicesVr.html">MOBILE APPLICATION DEVELOPMENT </a></li>
@@ -32,9 +42,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="Header_Navigation_item Active_Page"><a href="Technologies.html">TECHNOLOGIES</a> <svg class="Header_Navigation_arrow">
-                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                    </svg>
+                    <li class="Header_Navigation_item Active_Page"><a href="Technologies.html">TECHNOLOGIES</a> <svg
+                            class="Header_Navigation_arrow">
+                            <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                        </svg>
                         <div class="Header_Navigation_Sub_Menu">
                             <ul>
                                 <li><a href="Technologies.html">ANDROID </a></li>
@@ -46,9 +57,10 @@
                     <li class="Header_Navigation_item"><a href="Products.html">PRODUCTS</a></li>
                     <li class="Header_Navigation_item"><a href="Portfolio.html">PORTFOLIO</a></li>
                     <li class="Header_Navigation_item"><a href="Blog.html">BLOG</a></li>
-                    <li class="Header_Navigation_item"><a href="AboutUs.html">ABOUT US</a> <svg class="Header_Navigation_arrow">
-                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                    </svg>
+                    <li class="Header_Navigation_item"><a href="AboutUs.html">ABOUT US</a> <svg
+                            class="Header_Navigation_arrow">
+                            <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                        </svg>
                         <div class="Header_Navigation_Sub_Menu">
                             <ul>
                                 <li><a href="ContacUs.html">CONTACTS </a></li>
@@ -59,23 +71,48 @@
                     </li>
                 </ul>
             </div>
-            <div >
-             <a href="ContacUs.html"> <button class="TopButton">CONTACT US</button></a>
+            <div>
+                <a href="ContacUs.html"> <button class="TopButton Header_button">CONTACT US</button></a>
             </div>
         </div>
     </header>
     <main>
         <!--Social_Bar_Right -->
-        <div class="Social_Bar_Right">
+        <section class="Social_Bar_Right">
             <ul>
-                <li><a href="https://facebook.com/" target="_blank"><img src="Images/Icons/fb.svg" alt=""></a></li>
-                <li><a href="https://www.linkedin.com/" target="_blank"><img src="Images/Icons/in.svg" alt=""></a></li>
-                <li><a href="https://www.whatsapp.com/" target="_blank"><img src="Images/Icons/Phone.svg" alt=""></a></li>
-                <li><a href="https://www.skype.com/ru/" target="_blank"><img src="Images/Icons/skype.svg" alt=""></a></li>
+                <a href="https://facebook.com/" target="_blank">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.0301C24 5.38947 18.624 0 12 0C5.376 0 0 5.38947 0 12.0301C0 17.8526 4.128 22.7008 9.6 23.8195V15.6391H7.2V12.0301H9.6V9.02256C9.6 6.70075 11.484 4.81203 13.8 4.81203H16.8V8.42105H14.4C13.74 8.42105 13.2 8.96241 13.2 9.62406V12.0301H16.8V15.6391H13.2V24C19.26 23.3985 24 18.2737 24 12.0301Z" fill="#0D6EB7"/>
+                            </svg>
+                    </li>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.3736 0 0 5.3736 0 12C0 18.6264 5.3736 24 12 24C18.6264 24 24 18.6264 24 12C24 5.3736 18.6264 0 12 0ZM8.51294 18.1406H5.59039V9.34808H8.51294V18.1406ZM7.05176 8.14746H7.03271C6.052 8.14746 5.41772 7.47235 5.41772 6.6286C5.41772 5.76581 6.07141 5.10938 7.07117 5.10938C8.07092 5.10938 8.68616 5.76581 8.7052 6.6286C8.7052 7.47235 8.07092 8.14746 7.05176 8.14746ZM19.051 18.1406H16.1288V13.4368C16.1288 12.2547 15.7057 11.4485 14.6483 11.4485C13.8409 11.4485 13.3601 11.9923 13.1488 12.5173C13.0715 12.7051 13.0527 12.9677 13.0527 13.2305V18.1406H10.1303C10.1303 18.1406 10.1686 10.173 10.1303 9.34808H13.0527V10.593C13.441 9.9939 14.1359 9.14172 15.6865 9.14172C17.6093 9.14172 19.051 10.3984 19.051 13.099V18.1406Z" fill="#0D6EB7"/>
+                            </svg>                            
+                    </li>
+                </a>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.003 0H11.997C5.3805 0 0 5.382 0 12C0 14.625 0.846 17.058 2.2845 19.0335L0.789 23.4915L5.4015 22.017C7.299 23.274 9.5625 24 12.003 24C18.6195 24 24 18.6165 24 12C24 5.3835 18.6195 0 12.003 0ZM18.9855 16.9455C18.696 17.763 17.547 18.441 16.6305 18.639C16.0035 18.7725 15.1845 18.879 12.4275 17.736C8.901 16.275 6.63 12.6915 6.453 12.459C6.2835 12.2265 5.028 10.5615 5.028 8.8395C5.028 7.1175 5.9025 6.279 6.255 5.919C6.5445 5.6235 7.023 5.4885 7.482 5.4885C7.6305 5.4885 7.764 5.496 7.884 5.502C8.2365 5.517 8.4135 5.538 8.646 6.0945C8.9355 6.792 9.6405 8.514 9.7245 8.691C9.81 8.868 9.8955 9.108 9.7755 9.3405C9.663 9.5805 9.564 9.687 9.387 9.891C9.21 10.095 9.042 10.251 8.865 10.47C8.703 10.6605 8.52 10.8645 8.724 11.217C8.928 11.562 9.633 12.7125 10.671 13.6365C12.0105 14.829 13.0965 15.21 13.485 15.372C13.7745 15.492 14.1195 15.4635 14.331 15.2385C14.5995 14.949 14.931 14.469 15.2685 13.9965C15.5085 13.6575 15.8115 13.6155 16.1295 13.7355C16.4535 13.848 18.168 14.6955 18.5205 14.871C18.873 15.048 19.1055 15.132 19.191 15.2805C19.275 15.429 19.275 16.1265 18.9855 16.9455Z" fill="#0D6EB7"/>
+                            </svg>                            
+                    </li>
+                </a>
+                <a href="https://www.skype.com/ru/" target="_blank">
+                    <li>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.2858 14.533C25.0221 6.73175 18.1869 -0.355273 10.1599 1.0052C5.80223 -1.69876 0 1.3568 0 6.54097C0 7.74661 0.332669 8.87534 0.911094 9.84825C-0.702302 17.6675 6.18885 24.6526 14.2089 23.1992C19.8782 26.1969 26.143 20.2186 23.2858 14.533ZM15.6554 19.2377C13.5495 20.1037 10.084 20.1087 7.98706 19.0109C4.99703 17.4167 4.46556 13.8278 7.04499 13.8278C8.98906 13.8278 8.37367 16.0942 10.3367 17.0182C11.2378 17.4347 13.1749 17.4777 14.3008 16.7185C15.4127 15.9744 15.3108 14.8037 14.7064 14.2443C13.105 12.766 8.52253 13.3533 6.42761 10.7652C5.51751 9.64248 5.34568 7.66171 6.46457 6.22532C8.41463 3.71615 14.1369 3.56332 16.5975 5.45819C18.8692 7.21621 18.2558 9.54958 16.4227 9.54958C14.2179 9.54958 15.3767 6.66483 11.8173 6.66483C9.23682 6.66483 8.22182 8.49977 10.039 9.39276C12.5026 10.6164 18.7803 10.2078 18.7803 14.9895C18.7753 16.9792 17.5555 18.4626 15.6554 19.2377Z" fill="#0D6EB7"/>
+                            </svg>
+                            
+                    </li>
+                </a>
             </ul>
-        </div>
+        </section>
            <!--Current_Page -->
-           <div class="Current_Page">
+           <section class="Current_Page">
             <a href="index.html">Home</a>
             <svg>
                 <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
@@ -85,14 +122,23 @@
                 <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
             </svg>
             <a href="Technologies.html">Android</a>
-        </div>
+        </section>
         <!--TOP -->
-        <div class="Top_container">
+        <section class="Top_container">
             <div class="Top_header">
                 <div class="Top_left">
                     <h1>Android technologies</h1>
                 </div>
-                <div class="Top_Right"><img src="Images/Technologies.png" alt=""></div>
+                <div class="Top_Right">
+                    <picture>
+                        <source type="image/avif"
+                            srcset="Images/Technologies.avif 1x,Images/Technologies@2x.avif 2x, Images/Technologies@3x.avif 3x">
+                        <source type="image/webp"
+                            srcset="Images/Technologies.webp 1x,Images/Technologies@2x.webp 2x, Images/Technologies@3x.webp 3x">
+                        <img src="Images/Technologies.png" srcset="Images/Technologies@2x.png 2x, Images/Technologies@3x.png 3x"
+                            alt="Technologies">
+                    </picture>
+                </div>
             </div>
             <div class="Top_Text">
                 <div class="Top_Text_item">
@@ -116,51 +162,119 @@
                         Praesent a lorem quis sem cursus feugiat sed nec erat.</p>
                 </div>
             </div>
-        </div>
+        </section>
         <!--Services -->
-        <div class="Achievements_container">
+        <section class="Achievements_container">
             <h2>Services</h2>
             <div class="Achievements_Cards">
                 <div class="Achievements_Card">
-                    <img src="Images/ServicesVr/smartphone.png" alt="">
+                    <svg width="115" height="115" viewBox="0 0 115 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M84.8769 0H32.1253C28.1963 0 25 3.24398 25 7.23V12H92V7.23C92.0002 3.24398 88.8041 0 84.8769 0ZM68.3537 9.22992H48.649C47.5614 9.22992 46.6786 8.33391 46.6786 7.23C46.6786 6.12609 47.5614 5.23008 48.649 5.23008H68.3537C69.4413 5.23008 70.3241 6.12609 70.3241 7.23C70.3241 8.33391 69.4413 9.22992 68.3537 9.22992Z" fill="#276ED8"/>
+                        <path d="M59.8798 101.583H55.1208C54.3196 101.583 53.666 102.235 53.666 103.038V103.964C53.666 104.765 54.3176 105.417 55.1208 105.417H59.8798C60.681 105.417 61.3326 104.765 61.3326 103.964V103.038C61.3346 102.235 60.681 101.583 59.8798 101.583Z" fill="#276ED8"/>
+                        <path d="M92 15H25V92H92V15Z" fill="#276ED8"/>
+                        <path d="M73.0748 56.5956L78 55.6692V51.2536L73.0748 50.4044C72.6966 48.5903 71.9786 46.8919 70.9905 45.3866L73.8159 41.2411L70.6894 38.1146L66.6057 41.0018C65.1003 40.0137 63.4097 39.3034 61.5879 38.9252L60.6615 34H56.2458L55.3967 38.9252C53.5825 39.3034 51.8842 40.0214 50.3789 41.0095L46.2411 38.1841L43.1146 41.3106L46.0018 45.3943C45.0137 46.8996 44.3034 48.598 43.9252 50.4121L39 51.3385V55.7542L43.9252 56.6033C44.3034 58.4252 45.0214 60.1158 46.0095 61.6211L43.1841 65.7589L46.3106 68.8854L50.402 65.9982C51.9074 66.9863 53.6057 67.7043 55.4198 68.0748L56.3462 73H60.7619L61.611 68.0748C63.4329 67.6966 65.1235 66.9786 66.6289 65.9905L70.7666 68.8159L73.8931 65.6894L71.0059 61.6057C71.9863 60.1081 72.6966 58.4175 73.0748 56.5956ZM58.5 62.6479C53.4513 62.6479 49.3599 58.5487 49.3599 53.5077C49.3599 48.4667 53.4513 44.3676 58.5 44.3676C63.5487 44.3676 67.6401 48.459 67.6401 53.5077C67.6401 58.5564 63.5487 62.6479 58.5 62.6479Z" fill="#66D6A0"/>
+                        <path d="M25 96V108.131C25 111.918 28.1962 115 32.1235 115H84.8765C88.8038 115 92 111.918 92 108.131V96H25Z" fill="#276ED8"/>
+                        </svg>
+                        
                     <p>Mobile Application Development</p>
                 </div>
                 <div class="Achievements_Card">
-                    <img src="Images/ServicesVr/Gamepad.png" alt="">
+                    <svg width="107" height="108" viewBox="0 0 107 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M77.2334 37.6177C67.7084 37.6177 63.9481 44.185 61.952 48.9423C60.4157 45.83 57.2094 43.6855 53.5118 43.6855C49.8143 43.6855 46.6079 45.83 45.0717 48.9423C43.0755 44.185 39.3174 37.6177 29.7903 37.6177C7.82242 37.6177 0.0239258 81.9756 0.0239258 90.9446C0.0239258 102.817 6.68536 107.029 12.3895 107.029C22.4245 107.029 33.2161 89.8765 38.4228 81.3089H68.6009C73.8034 89.8703 84.6347 107.029 94.6342 107.029C100.338 107.029 107 102.817 107 90.9446C107 87.1739 101.122 37.6177 77.2334 37.6177Z" fill="#276ED8"/>
+                        <path d="M31.5411 64.5411H34.6764C36.4071 64.5411 37.8117 63.1365 37.8117 61.4058C37.8117 59.6752 36.4071 58.2706 34.6764 58.2706H31.5411V55.1353C31.5411 53.4046 30.1365 52 28.4058 52C26.6752 52 25.2706 53.4046 25.2706 55.1353V58.2706H22.1353C20.4046 58.2706 19 59.6752 19 61.4058C19 63.1365 20.4046 64.5411 22.1353 64.5411H25.2706V67.6764C25.2706 69.4071 26.6752 70.8117 28.4058 70.8117C30.1365 70.8117 31.5411 69.4071 31.5411 67.6764V64.5411Z" fill="#66D6A0"/>
+                        <path d="M47.2175 70.8117H59.7587C61.4893 70.8117 62.894 69.4071 62.894 67.6764C62.894 65.9457 61.4893 64.5411 59.7587 64.5411H47.2175C45.4869 64.5411 44.0823 65.9457 44.0823 67.6764C44.0823 69.4071 45.4869 70.8117 47.2175 70.8117Z" fill="#66D6A0"/>
+                        <path d="M81.7056 55.1353C81.7056 53.4046 80.301 52 78.5704 52C76.8397 52 75.4351 53.4046 75.4351 55.1353C75.4351 56.866 76.8397 58.2706 78.5704 58.2706C80.301 58.2706 81.7056 56.866 81.7056 55.1353Z" fill="#66D6A0"/>
+                        <path d="M69.1645 61.4058C69.1645 63.1365 70.5691 64.5411 72.2998 64.5411C74.0305 64.5411 75.4351 63.1365 75.4351 61.4058C75.4351 59.6752 74.0305 58.2706 72.2998 58.2706C70.5691 58.2706 69.1645 59.6752 69.1645 61.4058Z" fill="#66D6A0"/>
+                        <path d="M75.4351 67.6764C75.4351 69.4071 76.8397 70.8117 78.5704 70.8117C80.301 70.8117 81.7056 69.4071 81.7056 67.6764C81.7056 65.9457 80.301 64.5411 78.5704 64.5411C76.8397 64.5411 75.4351 65.9457 75.4351 67.6764Z" fill="#66D6A0"/>
+                        <path d="M81.7056 61.4058C81.7056 63.1365 83.1103 64.5411 84.8409 64.5411C86.5716 64.5411 87.9762 63.1365 87.9762 61.4058C87.9762 59.6752 86.5716 58.2706 84.8409 58.2706C83.1103 58.2706 81.7056 59.6752 81.7056 61.4058Z" fill="#66D6A0"/>
+                        <path d="M56.9026 37.7807C55.8052 37.5404 54.6703 37.415 53.5123 37.415C52.5195 37.415 51.5454 37.5069 50.5986 37.6825C50.3164 33.6526 49.4302 29.4367 47.2752 27.2817C41.7335 21.7398 27.9756 25.6177 20.0003 25.4967C6.60053 25.2942 -0.176272 17.7298 0.00348437 8.16967C0.0394356 6.25569 0.149589 4.26165 0.766403 2.23082C1.26596 0.571209 3.01544 -0.365195 4.67296 0.13436C6.3263 0.633915 7.2648 2.37504 6.7736 4.02838C3.7932 14.2099 10.3825 21.8387 27.8699 18.6534C35.1013 17.2852 46.3072 17.4451 51.7085 22.8463C54.7601 25.898 56.5075 30.9228 56.9026 37.7807Z" fill="#276ED8"/>
+                        </svg>
+                        
                     <p>Game development outsourcing</p>
                 </div>
-                <div class="Achievements_Card item_3">
-                    <img src="Images/ServicesVr/vr.png" alt="">
+                <div class="Achievements_Card ">
+                    <svg width="113" height="67" viewBox="0 0 113 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M85.9299 12.7285H70.4794V28.0925H41.9472V12.7285H26.4897C20.5647 12.7285 15.6175 16.987 14.542 22.6032V56.3536C15.6175 61.9698 20.5647 66.2274 26.4897 66.2274H34.5135L37.7033 48.0442H74.7233L77.913 66.2274H85.9299C91.8549 66.2274 96.8021 61.9698 97.8777 56.3536V22.6032C96.803 16.987 91.8549 12.7285 85.9299 12.7285Z" fill="#276ED8"/>
+                        <path d="M48.5322 0H63.8962V21.5076H48.5322V0Z" fill="#06B25F"/>
+                        <path d="M0 23.1169H7.95858V55.839H0V23.1169Z" fill="#276ED8"/>
+                        <path d="M104.464 23.1169H112.421V55.839H104.464V23.1169Z" fill="#276ED8"/>
+                        <path d="M43.2355 54.6274L41.2002 66.227H71.2308L69.1955 54.6274H43.2355Z" fill="#06B25F"/>
+                        </svg>
                     <p>vr app development</p>
                 </div>
-                <div class="Achievements_Card item_4">
-                    <img src="Images/ServicesVr/body.png" alt="">
+                <div class="Achievements_Card ">
+                    <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_10901_3257)">
+                        <path d="M41.9998 0C29.1338 0 18.6665 10.4673 18.6665 23.3333C18.6665 36.1993 29.1338 46.6667 41.9998 46.6667C54.8658 46.6667 65.3332 36.1993 65.3332 23.3333C65.3332 10.4673 54.8658 0 41.9998 0Z" fill="#276ED8"/>
+                        <path d="M77.3825 111.907C75.4971 111.473 74.3258 109.597 74.7551 107.711L81.7551 77.378C82.1938 75.4974 84.0745 74.3074 85.9505 74.7554C87.8358 75.1894 89.0071 77.0654 88.5778 78.9507L81.5778 109.284C81.1345 111.216 79.1978 112.35 77.3825 111.907Z" fill="#06B25F"/>
+                        <path d="M96.8335 107.333C95.8769 107.333 94.9249 106.941 94.2295 106.176C92.9369 104.734 93.0535 102.527 94.4909 101.229L103.269 93.3334L94.4909 85.4374C93.0535 84.1447 92.9369 81.9327 94.2295 80.4907C95.5269 79.0534 97.7389 78.9414 99.1762 80.2294L110.843 90.7294C111.58 91.3967 112 92.3394 112 93.3334C112 94.3274 111.58 95.27 110.843 95.9374L99.1762 106.437C98.5042 107.039 97.6689 107.333 96.8335 107.333Z" fill="#06B25F"/>
+                        <path d="M66.5002 107.333C65.6648 107.333 64.8295 107.039 64.1575 106.437L52.4908 95.9372C51.7535 95.2699 51.3335 94.3272 51.3335 93.3332C51.3335 92.3392 51.7535 91.3966 52.4908 90.7292L64.1575 80.2292C65.5948 78.9412 67.8068 79.0579 69.1042 80.4906C70.3968 81.9326 70.2802 84.1399 68.8428 85.4372L60.0648 93.3332L68.8428 101.229C70.2802 102.522 70.3968 104.734 69.1042 106.176C68.4088 106.941 67.4568 107.333 66.5002 107.333Z" fill="#06B25F"/>
+                        <path d="M43.1667 93.3333C43.1667 89.712 44.7113 86.2353 47.3993 83.8087L59.08 73.2947C61.4507 71.1667 64.4933 70.0047 67.662 70.0047C70.2893 70.0047 72.828 70.8353 74.9607 72.3053C76.5473 69.202 79.31 66.906 82.6093 65.9027C78.6287 59.9387 71.8527 56 64.1667 56H22.1667C9.94467 56 0 65.9447 0 78.1667V96.8333C0 98.7653 1.568 100.333 3.5 100.333H45.304C43.9507 98.2613 43.1667 95.844 43.1667 93.3333Z" fill="#276ED8"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_10901_3257">
+                        <rect width="112" height="112" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>                        
                     <p>Dedicated Developers</p>
                 </div>
-                <div class="Achievements_Card item_5">
-                    <img src="Images/ServicesVr/sdk.png" alt="">
+                <div class="Achievements_Card ">
+                    <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M52.0072 45.0598C53.0902 44.506 54.2966 44.2132 55.5482 44.2132C57.6223 44.2132 59.5724 45.0184 61.0423 46.4807L64.2068 43.3166C72.0378 46.0616 81.095 44.3043 87.3553 38.0443C92.6227 32.7768 94.7001 25.5295 93.5912 18.6981C93.469 17.9458 92.9363 17.3253 92.2113 17.0912C91.4862 16.8568 90.6903 17.0473 90.1516 17.5863L85.453 22.2849C81.6267 26.1112 75.4225 26.1112 71.5962 22.2849C67.7695 18.4586 67.7695 12.2544 71.5962 8.42808L76.2948 3.72951C76.8338 3.19045 77.0259 2.39452 76.7912 1.66915C76.5568 0.943457 75.9353 0.412093 75.1826 0.289915C68.3516 -0.81899 61.1039 1.25836 55.8368 6.52582C49.4835 12.8791 47.7737 22.1121 50.6957 30.0216L43.8325 36.8847L52.0072 45.0598Z" fill="#276ED8"/>
+                        <path d="M39.501 57.4964L31.3606 49.356L2.89558 77.8206C-0.805687 81.5219 -0.805687 87.5227 2.89558 91.224C6.59684 94.9253 12.5977 94.9253 16.299 91.224L40.8375 66.6857C38.3626 64.1976 37.9165 60.4412 39.501 57.4964Z" fill="#276ED8"/>
+                        <path d="M57.6564 49.8964C57.0744 49.3144 56.3112 49.0232 55.5483 49.0232C54.7854 49.0232 54.0222 49.3144 53.4402 49.8964L51.7409 51.5957L21.4715 21.3263L22.8863 19.9115C24.1754 18.6226 24.0154 16.4847 22.5461 15.4027L10.1961 6.30733C9.00928 5.43348 7.36228 5.55758 6.32008 6.59979L1.07635 11.8438C0.0341473 12.886 -0.089955 14.5334 0.783892 15.7199L9.87896 28.0698C10.9609 29.5388 13.0976 29.7005 14.3877 28.4101L15.8025 26.9949L46.072 57.2643L44.2531 59.0832C43.0887 60.2476 43.0887 62.1351 44.2531 63.2995L72.1774 91.2238C75.8786 94.9251 81.8795 94.9251 85.5807 91.2238C89.282 87.5225 89.282 81.5217 85.5807 77.8204L57.6564 49.8964Z" fill="#06B25F"/>
+                        </svg>
+                        
                     <p>sdk development</p>
                 </div>
                 <div class="Achievements_Card">
-                    <img src="Images/ServicesVr/model.png" alt="">
+                    <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_10901_3247)">
+                        <path d="M96.9933 45.6243C95.4104 44.7399 93.4108 45.2912 92.52 46.8611C91.626 48.4377 92.1803 50.4403 93.7569 51.3344C101.149 55.5226 105.438 60.675 105.438 65.8436C105.438 74.8255 93.0905 83.3136 75.0371 86.9698C73.2587 87.3319 72.1115 89.0622 72.4705 90.8375C72.8356 92.6302 74.5895 93.7642 76.3382 93.4041C97.868 89.0431 112 78.2253 112 65.8436C112 58.2077 106.529 51.0268 96.9933 45.6243Z" fill="#06B25F"/>
+                        <path d="M39.5938 94.0876V105.219C39.5938 106.43 40.2603 107.542 41.3273 108.112C42.3795 108.677 43.6778 108.627 44.6952 107.949L64.3827 94.8239C65.296 94.2151 65.844 93.1896 65.844 92.0939C65.844 90.9982 65.296 89.9727 64.3827 89.3639L44.6952 76.2389C43.6859 75.5723 42.3881 75.5019 41.3273 76.0755C40.2603 76.6455 39.5938 77.7574 39.5938 78.9687V87.3728C20.4089 84.0861 6.5625 75.3567 6.5625 65.8437C6.5625 60.675 10.8509 55.5224 18.2431 51.3344C19.8196 50.4404 20.3739 48.4377 19.4799 46.8612C18.5892 45.291 16.5928 44.74 15.0067 45.6244C5.47072 51.0268 0 58.2078 0 65.8437C0 79.211 15.9324 90.3581 39.5938 94.0876Z" fill="#06B25F"/>
+                        <path d="M82.2496 16.2373L57.4672 3.84601C56.5443 3.38466 55.4549 3.38466 54.532 3.84601L29.7485 16.238L55.9996 29.3623L82.2496 16.2373Z" fill="#276ED8"/>
+                        <path d="M85.5312 52.7188V21.9348L59.2812 35.0598C59.2812 35.7336 59.2812 68.5461 59.2812 67.8723L83.7176 55.6542C84.8295 55.0964 85.5312 53.9622 85.5312 52.7188Z" fill="#276ED8"/>
+                        <path d="M26.4688 52.7187C26.4688 53.9621 27.1705 55.0963 28.2824 55.6539L52.7188 67.8722C52.7188 65.5688 52.7188 34.3855 52.7188 35.0597L26.4688 21.9358V52.7187Z" fill="#276ED8"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_10901_3247">
+                        <rect width="112" height="112" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        
                     <p>sdk 3d modeling </p>
                 </div>
-                <div class="Achievements_Card item_7">
-                    <img src="Images/ServicesVr/bracer.png" alt="">
+                <div class="Achievements_Card ">
+                    <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_10901_3265)">
+                        <circle cx="43" cy="61" r="18" fill="#DFECFC"/>
+                        <path d="M42.9998 48.4084C36.1498 48.4084 30.5767 53.9816 30.5767 60.8316C30.5767 67.6816 36.1498 73.2547 42.9998 73.2547C49.8498 73.2547 55.4229 67.6816 55.4229 60.8316C55.4229 53.9816 49.8498 48.4084 42.9998 48.4084ZM38.3806 68.6776V52.9856L51.3385 60.8316L38.3806 68.6776Z" fill="#06B25F"/>
+                        <path d="M85.9999 19.0369C85.996 16.1722 84.5361 11.9579 77.6127 8.13072C72.8203 5.48128 66.2118 3.46172 58.5016 2.29053L55.6035 1.84961V32.5256C62.6221 31.7448 69.039 30.3105 74.3268 28.3021C81.2233 25.6821 85.5079 22.2617 85.9999 19.0369Z" fill="#276ED8"/>
+                        <path d="M42.9999 38.2469C30.5302 38.2469 18.7692 36.388 9.88389 33.0129C5.77851 31.4533 2.46113 29.6194 0 27.5854V66.0935C0 71.3215 4.78776 76.0194 13.4814 79.3217C21.4061 82.332 31.8891 83.9894 42.9999 83.9894C54.1108 83.9894 64.5944 82.332 72.5184 79.3217C81.2121 76.0194 85.9998 71.3215 85.9998 66.0935V27.5854C83.5387 29.6194 80.2213 31.4533 76.1159 33.0129C67.2307 36.388 55.4696 38.2469 42.9999 38.2469ZM42.9999 78.2942C33.3713 78.2942 25.5378 70.46 25.5378 60.8314C25.5378 51.2021 33.3713 43.3686 42.9999 43.3686C52.6292 43.3686 60.4627 51.2021 60.4627 60.8314C60.4627 70.46 52.6292 78.2942 42.9999 78.2942Z" fill="#276ED8"/>
+                        <path d="M11.6732 28.3021C16.9583 30.3092 23.3713 31.7435 30.3866 32.5243V1.84766L27.4885 2.28792C19.779 3.45845 13.1724 5.47867 8.38138 8.12943C1.46317 11.9573 0.00393677 16.1716 0 19.0369C0.492752 22.2618 4.77661 25.6822 11.6732 28.3021Z" fill="#276ED8"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_10901_3265">
+                        <rect width="86" height="86" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>                        
                     <p>ar app development</p>
                 </div>
             </div>
-        </div>
+        </section>
         <!--LookingPartner -->
-        <div class="LookingPartner">
+        <section class="LookingPartner">
             <div class="LookingPartner_about">
                 <h2>LOOKING FOR A PARTNER IN BUILDING A SOLUTION?</h2>
                 <p>We are ready to discuss your project requirements</p>
                 <button>Let’s talk</button>
             </div>
-        </div>
+        </section>
         <!--Texts -->
-        <div class="Top_Text Text_container">
+        <section class="Top_Text Text_container">
             <div class="Top_Text_item">
                 <h3>Header 1</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales eleifend dolor
@@ -181,9 +295,9 @@
                     Maecenas venenatis molestie eros, in pulvinar urna elementum quis.
                     Praesent a lorem quis sem cursus feugiat sed nec erat.</p>
             </div>
-        </div>
+        </section>
         <!--CONTACTS -->
-        <div class="Contacts_container">
+        <section class="Contacts_container">
             <div class="Contacts_Header">
                 <h2>CONTACTS</h2>
                 <p>
@@ -198,21 +312,47 @@
             <div class="Contacts_body">
                 <div class="Contacts_body_left">
                     <ul>
-                        <li class="Contacts_item"><img src="Images/Icons/locatio.svg" alt=""><span>Ukraine, Kyiv, Rodyny
-                                Kristeriv 20B, office 188</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/phone_2.svg" alt=""><span>+38 (093) 345 56
+                        <a href="">
+                            <li class="Contacts_item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="#276ED8"/>
+                                </svg>
+                                <span>Ukraine, Kyiv, Rodyny
+                                    Kristeriv 20B, office 188</span></li>
+                        </a>
+                       <a href="">
+                        <li class="Contacts_item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="#276ED8"/>
+                            </svg>
+                            <span>+38 (093) 345 56
                                 76</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/Phone.svg" alt=""><span>+38 (093) 345 56
-                                77</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/skype.svg" alt=""><span>Stanassets</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/email.svg"
-                                alt=""><span>stanassets@gmail.com</span></li>
-                        <li class="Contacts_item"><img src="Images/Icons/fb.svg"
-                                alt=""><span>facebook.com/ Stanassets</span></li>
+                       </a>
+                        <a href="">
+                            <li class="Contacts_item"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.003 0H11.997C5.3805 0 0 5.382 0 12C0 14.625 0.846 17.058 2.2845 19.0335L0.789 23.4915L5.4015 22.017C7.299 23.274 9.5625 24 12.003 24C18.6195 24 24 18.6165 24 12C24 5.3835 18.6195 0 12.003 0ZM18.9855 16.9455C18.696 17.763 17.547 18.441 16.6305 18.639C16.0035 18.7725 15.1845 18.879 12.4275 17.736C8.901 16.275 6.63 12.6915 6.453 12.459C6.2835 12.2265 5.028 10.5615 5.028 8.8395C5.028 7.1175 5.9025 6.279 6.255 5.919C6.5445 5.6235 7.023 5.4885 7.482 5.4885C7.6305 5.4885 7.764 5.496 7.884 5.502C8.2365 5.517 8.4135 5.538 8.646 6.0945C8.9355 6.792 9.6405 8.514 9.7245 8.691C9.81 8.868 9.8955 9.108 9.7755 9.3405C9.663 9.5805 9.564 9.687 9.387 9.891C9.21 10.095 9.042 10.251 8.865 10.47C8.703 10.6605 8.52 10.8645 8.724 11.217C8.928 11.562 9.633 12.7125 10.671 13.6365C12.0105 14.829 13.0965 15.21 13.485 15.372C13.7745 15.492 14.1195 15.4635 14.331 15.2385C14.5995 14.949 14.931 14.469 15.2685 13.9965C15.5085 13.6575 15.8115 13.6155 16.1295 13.7355C16.4535 13.848 18.168 14.6955 18.5205 14.871C18.873 15.048 19.1055 15.132 19.191 15.2805C19.275 15.429 19.275 16.1265 18.9855 16.9455Z" fill="#0D6EB7"/>
+                                </svg>             <span>+38 (093) 345 56
+                                    77</span></li>
+                        </a>
+                       <a href="">
+                        <li class="Contacts_item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.2858 14.533C25.0221 6.73175 18.1869 -0.355273 10.1599 1.0052C5.80223 -1.69876 0 1.3568 0 6.54097C0 7.74661 0.332669 8.87534 0.911094 9.84825C-0.702302 17.6675 6.18885 24.6526 14.2089 23.1992C19.8782 26.1969 26.143 20.2186 23.2858 14.533ZM15.6554 19.2377C13.5495 20.1037 10.084 20.1087 7.98706 19.0109C4.99703 17.4167 4.46556 13.8278 7.04499 13.8278C8.98906 13.8278 8.37367 16.0942 10.3367 17.0182C11.2378 17.4347 13.1749 17.4777 14.3008 16.7185C15.4127 15.9744 15.3108 14.8037 14.7064 14.2443C13.105 12.766 8.52253 13.3533 6.42761 10.7652C5.51751 9.64248 5.34568 7.66171 6.46457 6.22532C8.41463 3.71615 14.1369 3.56332 16.5975 5.45819C18.8692 7.21621 18.2558 9.54958 16.4227 9.54958C14.2179 9.54958 15.3767 6.66483 11.8173 6.66483C9.23682 6.66483 8.22182 8.49977 10.039 9.39276C12.5026 10.6164 18.7803 10.2078 18.7803 14.9895C18.7753 16.9792 17.5555 18.4626 15.6554 19.2377Z" fill="#0D6EB7"/>
+                            </svg><span>Stanassets</span></li>
+                       </a>
+                       <a href="">
+                        <li class="Contacts_item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#276ED8"/>
+                            </svg>
+                            <span>stanassets@gmail.com</span></li>
+                       </a>
+                       <a href="">
+                         <li class="Contacts_item"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.0301C24 5.38947 18.624 0 12 0C5.376 0 0 5.38947 0 12.0301C0 17.8526 4.128 22.7008 9.6 23.8195V15.6391H7.2V12.0301H9.6V9.02256C9.6 6.70075 11.484 4.81203 13.8 4.81203H16.8V8.42105H14.4C13.74 8.42105 13.2 8.96241 13.2 9.62406V12.0301H16.8V15.6391H13.2V24C19.26 23.3985 24 18.2737 24 12.0301Z" fill="#0D6EB7"/>
+                            </svg><span>facebook.com/ Stanassets</span></li>
+                       </a>
                     </ul>
                 </div>
                 <div class="Contacts_body_right">
                     <form action="">
+
                         <input class="Contacts_input" placeholder="Name" type="text" name="">
                         <input class="Contacts_input" placeholder="Email" type="email" name="">
                         <textarea class="Contacts_input" placeholder="Message" name="" id="" cols="30"
@@ -221,9 +361,9 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
         <!--Recent Project -->
-        <div class="RecProject_Container">
+        <section class="RecProject_Container">
             <h2>Recent Projects</h2>
             <div class="RecProject_body">
                 <div>
@@ -232,28 +372,78 @@
                     </svg>
                 </div>
                 <div class="RecProject_Content">
-                    <div class="RecProject_Content_item">
-                        <img src="Images/ServicesVr/ori.png" alt="">
-                        <div class="RecProject_Content_item_text">
-                            <h3>Ori and the will of the wisps </h3>
-                            <p>This plugin provides easy and flexible functionality of iOS
-                                native functions which are not natively available from Unity.</p>
+                    <div class="RecProject_Content_Train">
+                        <div class="RecProject_Content_item">
+                            <picture>
+                                <source type="image/avif" srcset="Images/ServicesVr/ori.avif 1x,Images/ServicesVr/ori@2x.avif 2x,Images/ServicesVr/ori@3x.avif 3x">
+                                <source type="image/webp" srcset="Images/ServicesVr/ori.webp 1x,Images/ServicesVr/ori@2x.webp 2x,Images/ServicesVr/ori@3x.webp 3x">
+                                <img src="Images/ServicesVr/ori.jpg" srcset="Images/ServicesVr/ori@2x.jpg 2x,Images/ServicesVr/ori@3x.jpg 3x" alt="ori">
+                            </picture>
+                            <div class="RecProject_Content_item_text">
+                                <h3>Ori and the will of the wisps </h3>
+                                <p>This plugin provides easy and flexible functionality of iOS
+                                    native functions which are not natively available from Unity.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="RecProject_Content_item">
-                        <img src="Images/ServicesVr/heart.png" alt="">
-                        <div class="RecProject_Content_item_text">
-                            <h3>tin hearts</h3>
-                            <p>This plugin provides easy and flexible functionality of
-                                iOS native functions which are not natively available from Unity.</p>
+                        <div class="RecProject_Content_item">
+                            <picture>
+                                <source type="image/avif" srcset="Images/ServicesVr/heart.avif 1x,Images/ServicesVr/heart@2x.avif 2x,Images/ServicesVr/heart@3x.avif 3x">
+                                <source type="image/webp" srcset="Images/ServicesVr/heart.webp 1x,Images/ServicesVr/heart@2x.webp 2x,Images/ServicesVr/heart@3x.webp 3x">
+                                <img src="Images/ServicesVr/heart.jpg" srcset="Images/ServicesVr/heart@2x.jpg 2x,Images/ServicesVr/heart@3x.jpg 3x" alt="heart">
+                            </picture>
+                            <div class="RecProject_Content_item_text">
+                                <h3>tin hearts</h3>
+                                <p>This plugin provides easy and flexible functionality of
+                                    iOS native functions which are not natively available from Unity.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="RecProject_Content_item">
-                        <img src="Images/ServicesVr/stickman.png" alt="">
-                        <div class="RecProject_Content_item_text">
-                            <h3>stickman trials</h3>
-                            <p>This plugin provides easy and flexible functionality of iOS
-                                native functions which are not natively available from Unity.</p>
+                        <div class="RecProject_Content_item">
+                            <picture>
+                                <source type="image/avif" srcset="Images/ServicesVr/stickman.avif 1x,Images/ServicesVr/stickman@2x.avif 2x,Images/ServicesVr/stickman@3x.avif 3x">
+                                <source type="image/webp" srcset="Images/ServicesVr/stickman.webp 1x,Images/ServicesVr/stickman@2x.webp 2x,Images/ServicesVr/stickman@3x.webp 3x">
+                                <img src="Images/ServicesVr/stickman.jpg" srcset="Images/ServicesVr/stickman@2x.jpg 2x,Images/ServicesVr/stickman@3x.jpg 3x" alt="stickman">
+                            </picture>
+                            <div class="RecProject_Content_item_text">
+                                <h3>stickman trials</h3>
+                                <p>This plugin provides easy and flexible functionality of iOS
+                                    native functions which are not natively available from Unity.</p>
+                            </div>
+                        </div>
+                        <div class="RecProject_Content_item">
+                            <picture>
+                                <source type="image/avif" srcset="Images/ServicesVr/ori.avif 1x,Images/ServicesVr/ori@2x.avif 2x,Images/ServicesVr/ori@3x.avif 3x">
+                                <source type="image/webp" srcset="Images/ServicesVr/ori.webp 1x,Images/ServicesVr/ori@2x.webp 2x,Images/ServicesVr/ori@3x.webp 3x">
+                                <img src="Images/ServicesVr/ori.jpg" srcset="Images/ServicesVr/ori@2x.jpg 2x,Images/ServicesVr/ori@3x.jpg 3x" alt="ori">
+                            </picture>
+                            <div class="RecProject_Content_item_text">
+                                <h3>Ori and the will of the wisps </h3>
+                                <p>This plugin provides easy and flexible functionality of iOS
+                                    native functions which are not natively available from Unity.</p>
+                            </div>
+                        </div>
+                        <div class="RecProject_Content_item">
+                            <picture>
+                                <source type="image/avif" srcset="Images/ServicesVr/heart.avif 1x,Images/ServicesVr/heart@2x.avif 2x,Images/ServicesVr/heart@3x.avif 3x">
+                                <source type="image/webp" srcset="Images/ServicesVr/heart.webp 1x,Images/ServicesVr/heart@2x.webp 2x,Images/ServicesVr/heart@3x.webp 3x">
+                                <img src="Images/ServicesVr/heart.jpg" srcset="Images/ServicesVr/heart@2x.jpg 2x,Images/ServicesVr/heart@3x.jpg 3x" alt="heart">
+                            </picture>
+                            <div class="RecProject_Content_item_text">
+                                <h3>tin hearts</h3>
+                                <p>This plugin provides easy and flexible functionality of
+                                    iOS native functions which are not natively available from Unity.</p>
+                            </div>
+                        </div>
+                        <div class="RecProject_Content_item">
+                            <picture>
+                                <source type="image/avif" srcset="Images/ServicesVr/stickman.avif 1x,Images/ServicesVr/stickman@2x.avif 2x,Images/ServicesVr/stickman@3x.avif 3x">
+                                <source type="image/webp" srcset="Images/ServicesVr/stickman.webp 1x,Images/ServicesVr/stickman@2x.webp 2x,Images/ServicesVr/stickman@3x.webp 3x">
+                                <img src="Images/ServicesVr/stickman.jpg" srcset="Images/ServicesVr/stickman@2x.jpg 2x,Images/ServicesVr/stickman@3x.jpg 3x" alt="stickman">
+                            </picture>
+                            <div class="RecProject_Content_item_text">
+                                <h3>stickman trials</h3>
+                                <p>This plugin provides easy and flexible functionality of iOS
+                                    native functions which are not natively available from Unity.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,9 +453,9 @@
                     </svg>
                 </div>
             </div>
-        </div>
+        </section>
         <!--faq -->
-        <div class="faq_container">
+        <section class="faq_container">
             <h2>FAQ’s</h2>
             <div class="faq_navigation">
                 <div class="faq_navigation_border"></div>
@@ -447,13 +637,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <!--footer -->
     <footer>
         <div class="Footer_top">
             <div class="Footer_Social">
-                <div class="Footer_Social_logo"> <a href="index.html"><img src="Images/Icons/logo.png" alt=""><span>stan’s
+                <div class="Footer_Social_logo"> <a href="index.html"> <picture>
+                    <source type="image/avif" srcset="Images/Icons/logo@2x.avif 2x, Images/Icons/logo@3x.avif 3x">
+                    <source type="image/webp" srcset="Images/Icons/logo.webp 1x,Images/Icons/logo@2x.webp 2x, Images/Icons/logo@3x.webp 3x">
+                    <img src="Images/Icons/logo.png" srcset="Images/Icons/logo@2x.png 2x, Images/Icons/logo@3x.png 3x" alt="logo">
+                </picture><span>stan’s
                             assets</span></a></div>
                 <div class="Footer_Social_link">
                     <div class="Footer_Social_link_item"><a href="https://facebook.com/" target="_blank">
@@ -517,8 +711,8 @@
                 <span>© 2021 - Stan’s Assets. All Right Reserved</span>
             </div>
             <div class="Footer_bottom_policy">
-                <div class="Footer_bottom_policy_item"><span>Privacy policy</span></div>
-                <div class="Footer_bottom_policy_item"><span>Cookies policy</span></div>
+                <div class="Footer_bottom_policy_item"><a href=""><span>Privacy policy</span></a></div>
+                <div class="Footer_bottom_policy_item"><a href=""><span>Cookies policy</span></a></div>
             </div>
         </div>
     </footer>

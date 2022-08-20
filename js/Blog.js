@@ -1,139 +1,290 @@
 /*Sub menu*/
 const HeaderContainer = document.querySelector(".Header__Container")
-const HeaderMobNavigation = `  <div class="Header__IMG">
-<a href="index.html"> <img src="Images/logoBlue.png" alt="logo"></a>
-                </div>
-            </div>
-            <div class="Header_Mob">
-                <svg class="Header_Mob_svg">
-                    <use xlink:href="Images/Icons/BurgerMenu.svg#Burger" />
-                </svg>
-                <div class="Header_Mob_Navigation">
-                    <div class="Header_Mob_Navigation_close"> <span >close</span></div>
-                    <ul>
-                        <li ><a href="ServicesVr.html">SERVICES</a> <svg class="Header_Mob_Navigation_arrow">
-                            <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                        </svg>
-                            <ul class="Header_Mob_Sub_Navigation">
-                                <li><a href="ServicesVr.html">MOBILE APPLICATION DEVELOPMENT</a></li>
-                                <li><a href="ServicesVr.html">GAME DEVELOPMENT OUTSOURCING</a></li>
-                                <li><a href="ServicesVr.html">VR APP DEVELOPMENT</a></li>
-                                <li><a href="ServicesVr.html">DEDICATED DEVELOPERS</a></li>
-                                <li><a href="ServicesVr.html">SDK DEVELOPMENT</a></li>
-                                <li><a href="ServicesVr.html">3D MODELING SERVICES</a></li>
-                                <li><a href="ServicesVr.html">AR APP DEVELOPMENT</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="Technologies.html">TECHNOLOGIES</a> <svg class="Header_Mob_Navigation_arrow">
-                            <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                        </svg>
-                            <ul class="Header_Mob_Sub_Navigation">
-                                <li><a href="Technologies.html">ANDROID</a></li>
-                                <li><a href="Technologies.html">IOS</a></li>
-                                <li><a href="Technologies.html">UNITY</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="Products.html">PRODUCTS</a></li>
-                        <li><a href="Portfolio.html">PORTFOLIO</a></li>
-                        <li><a href="Blog.html" class="Active_Page">BLOG</a></li>
-                        <li><a href="AboutUs.html">ABOUT US</a> <svg class="Header_Mob_Navigation_arrow">
-                            <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-                        </svg>
-                            <ul class="Header_Mob_Sub_Navigation">
-                                <li><a href="ContacUs.html">CONTACTS</a></li>
-                                <li><a href="Team.html">TEAM</a></li>
-                                <li><a href="JoinTheTam.html">join the team</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div><a href="ContacUs.html"> <button class="TopButton">CONTACT US</button></a></div>
-                </div>
-            </div>`
-const HeaderDescNavigation = `<div class="Header__IMG">
-<a href="index.html"> <img src="Images/logoBlue.png" alt="logo"></a>
-</div>
-<div class="Header_Navigation">
- <ul>
-     <li class="Header_Navigation_item"><a href="ServicesVr.html">SERVICES</a> <svg class="Header_Navigation_arrow">
-         <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-     </svg>
-         <div class="Header_Navigation_Sub_Menu">
-             <ul>
-                 <li><a href="ServicesVr.html">MOBILE APPLICATION DEVELOPMENT </a></li>
-                 <li><a href="ServicesVr.html">GAME DEVELOPMENT OUTSOURCING</a></li>
-                 <li><a href="ServicesVr.html"> VR APP DEVELOPMENT</a></li>
-                 <li><a href="ServicesVr.html">DEDICATED DEVELOPERS</a></li>
-                 <li><a href="ServicesVr.html"> SDK DEVELOPMENT</a></li>
-                 <li><a href="ServicesVr.html"> 3D MODELING SERVICES</a></li>
-                 <li><a href="ServicesVr.html"> AR APP DEVELOPMENT</a></li>
-             </ul>
-         </div>
-     </li>
-     <li class="Header_Navigation_item"><a href="Technologies.html">TECHNOLOGIES</a> <svg class="Header_Navigation_arrow">
-         <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-     </svg>
-         <div class="Header_Navigation_Sub_Menu">
-             <ul>
-                 <li><a href="Technologies.html">ANDROID </a></li>
-                 <li><a href="Technologies.html">IOS</a></li>
-                 <li><a href="Technologies.html">UNITY</a></li>
-             </ul>
-         </div>
-     </li>
-     <li class="Header_Navigation_item"><a href="Products.html">PRODUCTS</a></li>
-     <li class="Header_Navigation_item"><a href="Portfolio.html">PORTFOLIO</a></li>
-     <li class="Header_Navigation_item Active_Page"><a href="Blog.html">BLOG</a></li>
-     <li class="Header_Navigation_item"><a href="AboutUs.html">ABOUT US</a> <svg class="Header_Navigation_arrow">
-         <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
-     </svg>
-         <div class="Header_Navigation_Sub_Menu">
-             <ul>
-                 <li><a href="ContacUs.html">CONTACTS </a></li>
-                 <li><a href="Team.html">team</a></li>
-                 <li><a href="JoinTheTam.html">join the team</a></li>
-             </ul>
-         </div>
-     </li>
- </ul>
-</div>
-<div >
-<a href="ContacUs.html"> <button class="TopButton">CONTACT US</button></a>
-</div>`
-
+let HeaderListenerFUNC=
+{
+    headMobShowClose:"",
+    headListMobShowClose:"",  
+}
 function HeaderNavigation() {
-    if (document.documentElement.clientWidth<= 850) 
+    if (window.screen.width!==window.innerWidth)
     {
-        HeaderContainer.innerHTML = HeaderMobNavigation;
-        const Burger = document.querySelector(".Header_Mob_svg")
-        const MobNavigation = document.querySelector(".Header_Mob_Navigation")
-        const SubMenuMobArrow = document.querySelectorAll(".Header_Mob_Navigation_arrow")
-        const CloseNavigation = document.querySelector(".Header_Mob_Navigation_close")
-        const SubMenuMob = document.querySelectorAll(".Header_Mob_Sub_Navigation")
-        Burger.addEventListener("click", () => { MobNavigation.classList.toggle("Active_Sub_Menu") })
-        CloseNavigation.addEventListener("click", () => { MobNavigation.classList.toggle("Active_Sub_Menu") })
-        SubMenuMobArrow.forEach((elem, index) => {
-            elem.addEventListener("click", () => {
-                elem.classList.toggle("Active_Sub_Menu_img")
-                SubMenuMob[index].classList.toggle("Active_Sub_Menu")
+        if (window.innerWidth<= 1024 && !HeaderListenerFUNC.headMobShowClose) 
+        {
+            HeaderContainer.innerHTML = `  <div class="Header__IMG">
+            <div class="Header_Mob_logo"> <a href="index.html">  <picture>
+            <source type="image/avif" srcset="Images/logoBlue.avif 1x,Images/logoBlue@2x.avif 2x, Images/logoBlue@3x.avif 3x">
+            <source type="image/webp" srcset="Images/logoBlue.webp 1x,Images/logoBlue@2x.webp 2x, Images/logoBlue@3x.webp 3x">
+            <img src="Images/logoBlue.png" srcset="Images/logoBlue@2x.png 2x, Images/logoBlue@3x.png 3x" alt="logo">
+        </picture></a>
+            </div>
+        </div>
+        <div class="Header_Mob">
+            <svg class="Header_Mob_svg">
+                <use xlink:href="Images/Icons/BurgerMenu.svg#Burger" />
+            </svg>
+            <div class="Header_Mob_Navigation">
+                <div class="Header_Mob_Navigation_close"> <span >close</span></div>
+                <ul>
+                    <li><a href="ServicesVr.html">SERVICES</a> <svg data-index="0" class="Header_Mob_Navigation_arrow">
+                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                    </svg>
+                        <ul class="Header_Mob_Sub_Navigation">
+                            <li><a href="ServicesVr.html">MOBILE APPLICATION DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html">GAME DEVELOPMENT OUTSOURCING</a></li>
+                            <li><a href="ServicesVr.html">VR APP DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html">DEDICATED DEVELOPERS</a></li>
+                            <li><a href="ServicesVr.html">SDK DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html">3D MODELING SERVICES</a></li>
+                            <li><a href="ServicesVr.html">AR APP DEVELOPMENT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Technologies.html">TECHNOLOGIES</a> <svg data-index="1" class="Header_Mob_Navigation_arrow">
+                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                    </svg>
+                        <ul class="Header_Mob_Sub_Navigation">
+                            <li><a href="Technologies.html">ANDROID</a></li>
+                            <li><a href="Technologies.html">IOS</a></li>
+                            <li><a href="Technologies.html">UNITY</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Products.html">PRODUCTS</a></li>
+                    <li><a href="Portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="Blog.html" class="Active_Page">BLOG</a></li>
+                    <li><a href="AboutUs.html">ABOUT US</a> <svg data-index="2" class="Header_Mob_Navigation_arrow">
+                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                    </svg>
+                        <ul class="Header_Mob_Sub_Navigation">
+                            <li><a href="ContacUs.html">CONTACTS</a></li>
+                            <li><a href="Team.html">TEAM</a></li>
+                            <li><a href="JoinTheTam.html">join the team</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div><a href="ContacUs.html"> <button class="TopButton">CONTACT US</button></a></div>
+            </div>
+        </div>`
+            const Burger = document.querySelector(".Header_Mob_svg")
+            const MobNavigation = document.querySelector(".Header_Mob_Navigation")
+            const SubMenuMobArrow = document.querySelectorAll(".Header_Mob_Navigation_arrow")
+            const CloseNavigation = document.querySelector(".Header_Mob_Navigation_close")
+            const SubMenuMob = document.querySelectorAll(".Header_Mob_Sub_Navigation")
+            HeaderListenerFUNC.headMobShowClose=() => { MobNavigation.classList.toggle("active") }
+            HeaderListenerFUNC.headListMobShowClose=(e) => {
+                SubMenuMobArrow[e.currentTarget.getAttribute("data-index")].classList.toggle("active")
+                SubMenuMob[e.currentTarget.getAttribute("data-index")].classList.toggle("active")
+            }
+            Burger.addEventListener("click", HeaderListenerFUNC.headMobShowClose )
+            CloseNavigation.addEventListener("click",  HeaderListenerFUNC.headMobShowClose)
+            SubMenuMobArrow.forEach((elem) => {
+                elem.addEventListener("click", HeaderListenerFUNC.headListMobShowClose)
             })
-        })
+        } 
+        if (window.innerWidth>1024 && HeaderListenerFUNC.headMobShowClose)
+        {
+            document.querySelector(".Header_Mob_svg").removeEventListener("click",HeaderListenerFUNC.headMobShowClose)
+            document.querySelector(".Header_Mob_Navigation_close").removeEventListener("click",HeaderListenerFUNC.headMobShowClose)
+            document.querySelectorAll(".Header_Mob_Navigation_arrow").forEach((elem) => {
+                elem.removeEventListener("click", HeaderListenerFUNC.headListMobShowClose)
+            })
+            HeaderListenerFUNC.headMobShowClose="";
+            HeaderListenerFUNC.headListMobShowClose="";
+            HeaderContainer.innerHTML = ` <div class="Header__IMG">
+            <a href="index.html">
+            <picture>
+            <source type="image/avif" srcset="Images/logoBlue.avif 1x,Images/logoBlue@2x.avif 2x, Images/logoBlue@3x.avif 3x">
+            <source type="image/webp" srcset="Images/logoBlue.webp 1x,Images/logoBlue@2x.webp 2x, Images/logoBlue@3x.webp 3x">
+            <img src="Images/logoBlue.png" srcset="Images/logoBlue@2x.png 2x, Images/logoBlue@3x.png 3x" alt="logo">
+        </picture>
+            </a>
+            </div>
+        <div class="Header_Navigation">
+            <ul>
+                <li class="Header_Navigation_item"><a href="ServicesVr.html">SERVICES</a> <svg class="Header_Navigation_arrow">
+                    <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                </svg>
+                    <div class="Header_Navigation_Sub_Menu">
+                        <ul>
+                            <li><a href="ServicesVr.html">MOBILE APPLICATION DEVELOPMENT </a></li>
+                            <li><a href="ServicesVr.html">GAME DEVELOPMENT OUTSOURCING</a></li>
+                            <li><a href="ServicesVr.html"> VR APP DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html">DEDICATED DEVELOPERS</a></li>
+                            <li><a href="ServicesVr.html"> SDK DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html"> 3D MODELING SERVICES</a></li>
+                            <li><a href="ServicesVr.html"> AR APP DEVELOPMENT</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="Header_Navigation_item"><a href="Technologies.html">TECHNOLOGIES</a> <svg class="Header_Navigation_arrow">
+                    <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                </svg>
+                    <div class="Header_Navigation_Sub_Menu">
+                        <ul>
+                            <li><a href="Technologies.html">ANDROID </a></li>
+                            <li><a href="Technologies.html">IOS</a></li>
+                            <li><a href="Technologies.html">UNITY</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="Header_Navigation_item"><a href="Products.html">PRODUCTS</a></li>
+                <li class="Header_Navigation_item"><a href="Portfolio.html">PORTFOLIO</a></li>
+                <li class="Header_Navigation_item  Active_Page"><a href="Blog.html">BLOG</a></li>
+                <li class="Header_Navigation_item"><a href="AboutUs.html">ABOUT US</a> <svg class="Header_Navigation_arrow">
+                    <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                </svg>
+                    <div class="Header_Navigation_Sub_Menu">
+                        <ul>
+                            <li><a href="ContacUs.html">CONTACTS </a></li>
+                            <li><a href="Team.html">team</a></li>
+                            <li><a href="JoinTheTam.html">join the team</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+         <a href="ContacUs.html"> <button class="TopButton Header_button">CONTACT US</button></a>
+        </div>`
+        }
 
-    }
-
-
-    if (document.documentElement.clientWidth>850) 
+    }else
     {
-        HeaderContainer.innerHTML = HeaderDescNavigation
-        const HeadMenuli = document.querySelectorAll(".Header_Navigation_item")
-        const SubMenuArrow = document.querySelectorAll(".Header_Navigation_arrow")
-        const SubMenu = document.querySelectorAll(".Header_Navigation_Sub_Menu")
-        SubMenuArrow.forEach((elem, index) => {
-            elem.addEventListener("click", () => {
-                elem.classList.toggle("Active_Sub_Menu_img")
-                HeadMenuli[index].classList.toggle("Active_Navation")
-                SubMenu[index].classList.toggle("Active_Sub_Menu")
+        if (window.screen.width<= 1024 && !HeaderListenerFUNC.headMobShowClose) 
+        {
+            HeaderContainer.innerHTML = `  <div class="Header__IMG">
+            <div class="Header_Mob_logo"> <a href="index.html">  <picture>
+            <source type="image/avif" srcset="Images/logoBlue.avif 1x,Images/logoBlue@2x.avif 2x, Images/logoBlue@3x.avif 3x">
+            <source type="image/webp" srcset="Images/logoBlue.webp 1x,Images/logoBlue@2x.webp 2x, Images/logoBlue@3x.webp 3x">
+            <img src="Images/logoBlue.png" srcset="Images/logoBlue@2x.png 2x, Images/logoBlue@3x.png 3x" alt="logo">
+        </picture></a>
+            </div>
+        </div>
+        <div class="Header_Mob">
+            <svg class="Header_Mob_svg">
+                <use xlink:href="Images/Icons/BurgerMenu.svg#Burger" />
+            </svg>
+            <div class="Header_Mob_Navigation">
+                <div class="Header_Mob_Navigation_close"> <span >close</span></div>
+                <ul>
+                    <li><a href="ServicesVr.html">SERVICES</a> <svg data-index="0" class="Header_Mob_Navigation_arrow">
+                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                    </svg>
+                        <ul class="Header_Mob_Sub_Navigation">
+                            <li><a href="ServicesVr.html">MOBILE APPLICATION DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html">GAME DEVELOPMENT OUTSOURCING</a></li>
+                            <li><a href="ServicesVr.html">VR APP DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html">DEDICATED DEVELOPERS</a></li>
+                            <li><a href="ServicesVr.html">SDK DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html">3D MODELING SERVICES</a></li>
+                            <li><a href="ServicesVr.html">AR APP DEVELOPMENT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Technologies.html">TECHNOLOGIES</a> <svg data-index="1" class="Header_Mob_Navigation_arrow">
+                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                    </svg>
+                        <ul class="Header_Mob_Sub_Navigation">
+                            <li><a href="Technologies.html">ANDROID</a></li>
+                            <li><a href="Technologies.html">IOS</a></li>
+                            <li><a href="Technologies.html">UNITY</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Products.html">PRODUCTS</a></li>
+                    <li><a href="Portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="Blog.html" class="Active_Page">BLOG</a></li>
+                    <li><a href="AboutUs.html">ABOUT US</a> <svg data-index="2" class="Header_Mob_Navigation_arrow">
+                        <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                    </svg>
+                        <ul class="Header_Mob_Sub_Navigation">
+                            <li><a href="ContacUs.html">CONTACTS</a></li>
+                            <li><a href="Team.html">TEAM</a></li>
+                            <li><a href="JoinTheTam.html">join the team</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div><a href="ContacUs.html"> <button class="TopButton">CONTACT US</button></a></div>
+            </div>
+        </div>`
+            const Burger = document.querySelector(".Header_Mob_svg")
+            const MobNavigation = document.querySelector(".Header_Mob_Navigation")
+            const SubMenuMobArrow = document.querySelectorAll(".Header_Mob_Navigation_arrow")
+            const CloseNavigation = document.querySelector(".Header_Mob_Navigation_close")
+            const SubMenuMob = document.querySelectorAll(".Header_Mob_Sub_Navigation")
+            HeaderListenerFUNC.headMobShowClose=() => { MobNavigation.classList.toggle("active") }
+            HeaderListenerFUNC.headListMobShowClose=(e) => {
+                SubMenuMobArrow[e.currentTarget.getAttribute("data-index")].classList.toggle("active")
+                SubMenuMob[e.currentTarget.getAttribute("data-index")].classList.toggle("active")
+            }
+            Burger.addEventListener("click", HeaderListenerFUNC.headMobShowClose )
+            CloseNavigation.addEventListener("click",  HeaderListenerFUNC.headMobShowClose)
+            SubMenuMobArrow.forEach((elem) => {
+                elem.addEventListener("click", HeaderListenerFUNC.headListMobShowClose)
             })
-        })
+        } 
+        if (window.screen.width>1024 && HeaderListenerFUNC.headMobShowClose)
+        {
+            document.querySelector(".Header_Mob_svg").removeEventListener("click",HeaderListenerFUNC.headMobShowClose)
+            document.querySelector(".Header_Mob_Navigation_close").removeEventListener("click",HeaderListenerFUNC.headMobShowClose)
+            document.querySelectorAll(".Header_Mob_Navigation_arrow").forEach((elem) => {
+                elem.removeEventListener("click", HeaderListenerFUNC.headListMobShowClose)
+            })
+            HeaderListenerFUNC.headMobShowClose="";
+            HeaderListenerFUNC.headListMobShowClose="";
+            HeaderContainer.innerHTML = ` <div class="Header__IMG">
+            <a href="index.html">
+            <picture>
+            <source type="image/avif" srcset="Images/logoBlue.avif 1x,Images/logoBlue@2x.avif 2x, Images/logoBlue@3x.avif 3x">
+            <source type="image/webp" srcset="Images/logoBlue.webp 1x,Images/logoBlue@2x.webp 2x, Images/logoBlue@3x.webp 3x">
+            <img src="Images/logoBlue.png" srcset="Images/logoBlue@2x.png 2x, Images/logoBlue@3x.png 3x" alt="logo">
+        </picture>
+            </a>
+            </div>
+        <div class="Header_Navigation">
+            <ul>
+                <li class="Header_Navigation_item"><a href="ServicesVr.html">SERVICES</a> <svg class="Header_Navigation_arrow">
+                    <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                </svg>
+                    <div class="Header_Navigation_Sub_Menu">
+                        <ul>
+                            <li><a href="ServicesVr.html">MOBILE APPLICATION DEVELOPMENT </a></li>
+                            <li><a href="ServicesVr.html">GAME DEVELOPMENT OUTSOURCING</a></li>
+                            <li><a href="ServicesVr.html"> VR APP DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html">DEDICATED DEVELOPERS</a></li>
+                            <li><a href="ServicesVr.html"> SDK DEVELOPMENT</a></li>
+                            <li><a href="ServicesVr.html"> 3D MODELING SERVICES</a></li>
+                            <li><a href="ServicesVr.html"> AR APP DEVELOPMENT</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="Header_Navigation_item"><a href="Technologies.html">TECHNOLOGIES</a> <svg class="Header_Navigation_arrow">
+                    <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                </svg>
+                    <div class="Header_Navigation_Sub_Menu">
+                        <ul>
+                            <li><a href="Technologies.html">ANDROID </a></li>
+                            <li><a href="Technologies.html">IOS</a></li>
+                            <li><a href="Technologies.html">UNITY</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="Header_Navigation_item"><a href="Products.html">PRODUCTS</a></li>
+                <li class="Header_Navigation_item"><a href="Portfolio.html">PORTFOLIO</a></li>
+                <li class="Header_Navigation_item Active_Page"><a href="Blog.html">BLOG</a></li>
+                <li class="Header_Navigation_item"><a href="AboutUs.html">ABOUT US</a> <svg class="Header_Navigation_arrow">
+                    <use xlink:href="Images/Icons/arrowBlue.svg#ArrowBlue" />
+                </svg>
+                    <div class="Header_Navigation_Sub_Menu">
+                        <ul>
+                            <li><a href="ContacUs.html">CONTACTS </a></li>
+                            <li><a href="Team.html">team</a></li>
+                            <li><a href="JoinTheTam.html">join the team</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+         <a href="ContacUs.html"> <button class="TopButton Header_button">CONTACT US</button></a>
+        </div>`
+        }
 
     }
 }
@@ -145,11 +296,11 @@ const Blog = document.querySelector(".Blog_Body_item")
 const Posts = [
     {
         "id": 1,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "March 21, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -158,11 +309,11 @@ const Posts = [
     },
     {
         "id": 2,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -170,11 +321,11 @@ const Posts = [
 
     }, {
         "id": 3,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "1",
@@ -182,11 +333,11 @@ const Posts = [
 
     }, {
         "id": 4,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -194,11 +345,11 @@ const Posts = [
 
     }, {
         "id": 5,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "5",
@@ -206,11 +357,11 @@ const Posts = [
 
     }, {
         "id": 6,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -218,11 +369,11 @@ const Posts = [
 
     }, {
         "id": 7,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -230,11 +381,11 @@ const Posts = [
 
     }, {
         "id": 8,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -242,11 +393,11 @@ const Posts = [
 
     }, {
         "id": 9,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -254,11 +405,11 @@ const Posts = [
 
     }, {
         "id": 10,
-        "Image": "Images/ServicesVr/stickman.png",
+        "Image": "Images/ServicesVr/stickman",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "2",
@@ -266,11 +417,11 @@ const Posts = [
 
     }, {
         "id": 11,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "March 21, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -279,11 +430,11 @@ const Posts = [
     },
     {
         "id": 12,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -291,11 +442,11 @@ const Posts = [
 
     }, {
         "id": 13,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "1",
@@ -303,11 +454,11 @@ const Posts = [
 
     }, {
         "id": 14,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -315,11 +466,11 @@ const Posts = [
 
     }, {
         "id": 15,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "5",
@@ -327,11 +478,11 @@ const Posts = [
 
     }, {
         "id": 16,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -339,11 +490,11 @@ const Posts = [
 
     }, {
         "id": 17,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -351,11 +502,11 @@ const Posts = [
 
     }, {
         "id": 18,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -363,11 +514,11 @@ const Posts = [
 
     }, {
         "id": 19,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -375,11 +526,11 @@ const Posts = [
 
     }, {
         "id": 20,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "2",
@@ -387,11 +538,11 @@ const Posts = [
 
     }, {
         "id": 21,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "March 21, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -400,11 +551,11 @@ const Posts = [
     },
     {
         "id": 22,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -412,11 +563,11 @@ const Posts = [
 
     }, {
         "id": 23,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "1",
@@ -424,11 +575,11 @@ const Posts = [
 
     }, {
         "id": 24,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -436,11 +587,11 @@ const Posts = [
 
     }, {
         "id": 25,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "5",
@@ -448,11 +599,11 @@ const Posts = [
 
     }, {
         "id": 26,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -460,11 +611,11 @@ const Posts = [
 
     }, {
         "id": 27,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -472,11 +623,11 @@ const Posts = [
 
     }, {
         "id": 28,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -484,11 +635,11 @@ const Posts = [
 
     },{
         "id": 29,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "1",
@@ -496,11 +647,11 @@ const Posts = [
 
     }, {
         "id": 30,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -508,11 +659,11 @@ const Posts = [
 
     }, {
         "id": 31,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "5",
@@ -520,11 +671,11 @@ const Posts = [
 
     }, {
         "id": 32,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -532,11 +683,11 @@ const Posts = [
 
     }, {
         "id": 33,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -544,11 +695,11 @@ const Posts = [
 
     }, {
         "id": 34,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -556,11 +707,11 @@ const Posts = [
 
     }, {
         "id": 35,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -568,11 +719,11 @@ const Posts = [
 
     }, {
         "id": 36,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "2",
@@ -580,11 +731,11 @@ const Posts = [
 
     }, {
         "id": 37,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "March 21, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -593,11 +744,11 @@ const Posts = [
     },
     {
         "id": 38,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -605,11 +756,11 @@ const Posts = [
 
     },{
         "id": 39,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -617,11 +768,11 @@ const Posts = [
 
     },{
         "id": 40,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -629,11 +780,11 @@ const Posts = [
 
     }, {
         "id": 41,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "2",
@@ -641,11 +792,11 @@ const Posts = [
 
     }, {
         "id": 4,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "March 21, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -654,11 +805,11 @@ const Posts = [
     },
     {
         "id": 43,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -666,11 +817,11 @@ const Posts = [
 
     }, {
         "id": 44,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "1",
@@ -678,11 +829,11 @@ const Posts = [
 
     }, {
         "id": 45,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -690,11 +841,11 @@ const Posts = [
 
     }, {
         "id": 46,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "5",
@@ -702,11 +853,11 @@ const Posts = [
 
     }, {
         "id": 47,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -714,11 +865,11 @@ const Posts = [
 
     }, {
         "id": 48,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -726,11 +877,11 @@ const Posts = [
 
     }, {
         "id": 49,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -738,11 +889,11 @@ const Posts = [
 
     },{
         "id": 50,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "1",
@@ -750,11 +901,11 @@ const Posts = [
 
     }, {
         "id": 51,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -762,11 +913,11 @@ const Posts = [
 
     }, {
         "id": 52,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "5",
@@ -774,11 +925,11 @@ const Posts = [
 
     }, {
         "id": 53,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -786,11 +937,11 @@ const Posts = [
 
     }, {
         "id": 54,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -798,11 +949,11 @@ const Posts = [
 
     }, {
         "id": 55,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -810,11 +961,11 @@ const Posts = [
 
     }, {
         "id": 56,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "3",
@@ -822,11 +973,11 @@ const Posts = [
 
     }, {
         "id": 57,
-        "Image": "Images/ServicesVr/heart.png",
+        "Image": "Images/ServicesVr/heart",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "February 24, 2021",
         "TimeReadPost": "6",
         "RatePost": "2",
@@ -834,11 +985,11 @@ const Posts = [
 
     }, {
         "id": 58,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "March 21, 2021",
         "TimeReadPost": "6",
         "RatePost": "4",
@@ -847,11 +998,11 @@ const Posts = [
     },
     {
         "id": 59,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -859,11 +1010,11 @@ const Posts = [
 
     },{
         "id": 60,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -871,11 +1022,11 @@ const Posts = [
 
     },{
         "id": 61,
-        "Image": "Images/ServicesVr/ori.png",
+        "Image": "Images/ServicesVr/ori",
         "Title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Curabitur sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non elit.  Vivamus mollis, odio ac finibus rutrum ..",
-        "AuthorAvatar": "Images/sid.jfif",
-        "Author": "Andrew Williams",
+        "AuthorAvatar": "Images/sid",
+        "Author": "Eugeniro",
         "DatePost": "May 1, 2022",
         "TimeReadPost": "4",
         "RatePost": "2",
@@ -884,11 +1035,17 @@ const Posts = [
     }
 ];
 /*HTML POST*/
-function _Post(image, title, text,
+function _Post(id,image, title, text,
     AuthorAvatar, Author, DatePost, TimeReadPost, RatePost, vivews) {
-    return ` <a href="Article.html">
-<div class="Blog_item">
-    <div class="Blog_item_left"><img class="Blog_item_left_image" src="${image}" alt=""></div>
+    return ` 
+<div class="Blog_item" data-post="${id}">
+    <div class="Blog_item_left">
+    <picture>
+    <source type="image/avif" srcset="${image}.avif 1x,${image}@2x.avif 2x,${image}@3x.avif 3x">
+    <source type="image/webp" srcset="${image}.webp 1x,${image}@2x.webp 2x,${image}@3x.webp 3x">
+    <img class="Blog_item_left_image" src="${image}.jpg" srcset="${image}@2x.jpg 2x,${image}@3x.jpg 3x" alt="Game">
+    </picture>
+    </div>
     <div class="Blog_item_right">
         <div class="Blog_item_right_Top">
             <div class="Blog_Rating_star">
@@ -927,25 +1084,46 @@ function _Post(image, title, text,
         </div>
         <div class="Blog_item_right_bottom">
             <div class="Blog_Author">
-                <a href="Author.html"><img src="${AuthorAvatar}" alt=""></a>
+                <a href="Author.html">
+                <picture>
+                <source type="image/avif" srcset="${AuthorAvatar}.avif 1x">
+                <source type="image/webp" srcset="${AuthorAvatar}.webp 1x">
+                <img src="${AuthorAvatar},jpg" alt="Avatar">
+                </picture>
+                </a>
                 <a href="Author.html"><span class="Blog_Author_Name">by <span>${Author} </span></span></a>
                 </div>
             <div class="Blog_Date"><span>${DatePost}</span></div>
         </div>
     </div>
-</div>
-</a>`
+</div>`
+}
+function Postlocation(e)
+{
+    sessionStorage.setItem("POST",e.currentTarget.getAttribute("data-post"))
+    window.location="Article.html";
 }
 let PostPage = 1
 /*Add post*/
 function ShowPostPage(CurrentPage) {
     for (let i = (CurrentPage * 10 - 10); i < (CurrentPage * 10); i++) {
-      if (Posts[i]) Blog.insertAdjacentHTML("beforeend",_Post(Posts[i].Image, Posts[i].Title, Posts[i].text, Posts[i].AuthorAvatar,
+      if (Posts[i]) Blog.insertAdjacentHTML("beforeend",_Post(Posts[i].id,Posts[i].Image, Posts[i].Title, Posts[i].text, Posts[i].AuthorAvatar,
         Posts[i].Author, Posts[i].DatePost, Posts[i].TimeReadPost, Posts[i].RatePost, Posts[i].vivews));
-        else return;
+        else
+        { 
+            document.querySelectorAll(".Blog_item").forEach((e)=>
+            {
+                e.addEventListener("click",Postlocation)
+            })
+            return;
+        }
+
 
     }
-
+    document.querySelectorAll(".Blog_item").forEach((e)=>
+    {
+        e.addEventListener("click",Postlocation)
+    })
 }
 /*********//*********/
 
@@ -959,11 +1137,14 @@ let CountPostPage = Math.ceil(Posts.length / 10);
 function LeftChangePage() {
 
     PostPage--;
+    document.querySelectorAll(".Blog_item").forEach((e)=>
+    {
+        e.removeEventListener("click",Postlocation)
+    })
     while(Blog.firstChild) {
         Blog.removeChild(Blog.firstChild);
     }
     ShowPostPage(PostPage);
-
     if (PageListRight)
     {
         PageListRight.remove();
@@ -981,6 +1162,10 @@ function LeftChangePage() {
 function RightChangePage()
 {
     PostPage++;
+    document.querySelectorAll(".Blog_item").forEach((e)=>
+    {
+        e.removeEventListener("click",Postlocation)
+    })
     while(Blog.firstChild) {
         Blog.removeChild(Blog.firstChild);
     }
@@ -1002,6 +1187,10 @@ function RightChangePage()
 function ChangePage()
 {
    PostPage=parseInt(this.innerHTML);
+   document.querySelectorAll(".Blog_item").forEach((e)=>
+   {
+       e.removeEventListener("click",Postlocation)
+   })
     while(Blog.firstChild) {
         Blog.removeChild(Blog.firstChild);
     }
